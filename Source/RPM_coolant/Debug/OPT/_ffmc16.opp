@@ -1,0 +1,9 @@
+-g
+-w 1
+-O 0
+-model MEDIUM
+-B
+-c
+-cwno
+-cpu MB96F673RB
+-Xinittbl

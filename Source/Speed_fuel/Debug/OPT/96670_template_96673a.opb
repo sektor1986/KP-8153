@@ -1,0 +1,12 @@
+-dt s,d,r,a
+-pl 60
+-pw 132
+-g
+-cwno
+-cpu MB96F673AB
+"D:\TemplateProject\16FXS\Template_16FXS_No4\96670_template_96673a-v14\Debug\ABS\96670_template_96673a.abs"
+-a "D:\TemplateProject\16FXS\Template_16FXS_No4\96670_template_96673a-v14\Debug\OBJ\start.obj"
+-a "D:\TemplateProject\16FXS\Template_16FXS_No4\96670_template_96673a-v14\Debug\OBJ\main.obj"
+-a "D:\TemplateProject\16FXS\Template_16FXS_No4\96670_template_96673a-v14\Debug\OBJ\vectors.obj"
+-a "D:\TemplateProject\16FXS\Template_16FXS_No4\96670_template_96673a-v14\Debug\OBJ\_ffmc16.obj"
+

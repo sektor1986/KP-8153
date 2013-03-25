@@ -1,0 +1,9 @@
+@e:\sektor\git_project\kp-8153\source\speed_fuel\src\vectors.c
+#  E=Extern  S=Static  I=Interrupt
+#   {Stack}    {E|S|I} {function name} [A]
+#       ->     {E|S}   {call function}
+#               ...
+#
+         4	E	_Vectors_InitIrqLevels
+#
+        14	I	_Vectors_Isr_DefaultHandler

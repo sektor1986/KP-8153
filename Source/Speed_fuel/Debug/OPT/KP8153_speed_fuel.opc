@@ -1,0 +1,11 @@
+-g
+-w 1
+-I "src"
+-I "src/driver"
+-I "src/mb96670_smc_zpd"
+-O 0
+-model MEDIUM
+-B
+-c
+-cwno
+-cpu MB96F673AB

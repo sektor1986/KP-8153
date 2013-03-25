@@ -1,0 +1,17 @@
+@e:\sektor\git_project\kp-8153\source\rpm_coolant\src\driver\can.c
+#  E=Extern  S=Static  I=Interrupt
+#   {Stack}    {E|S|I} {function name} [A]
+#       ->     {E|S}   {call function}
+#               ...
+#
+         6	E	_CAN_Init
+#
+         4	E	_CAN_SetupTransmitter
+#
+         8	E	_CAN_UpdateTransmitter
+#
+         4	E	_CAN_SetupReceiver
+#
+         8	E	_CAN_GetErrorState
+#
+        28	I	_ISR_CAN0

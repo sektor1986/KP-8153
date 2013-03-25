@@ -1,0 +1,37 @@
+@e:\sektor\git_project\kp-8153\source\speed_fuel\src\main.c
+#  E=Extern  S=Static  I=Interrupt
+#   {Stack}    {E|S|I} {function name} [A]
+#       ->     {E|S}   {call function}
+#               ...
+#
+        12	E	_main
+	->	E	_Button_Init
+	->	E	_ClearPosSMC
+	->	E	_DriverInit
+	->	E	_InitADC
+	->	E	_InitBacklight
+	->	E	_InitICU1
+	->	E	_InitSMC
+	->	E	_Timer_Init
+	->	E	_Timer_Main
+	->	E	_Timer_Wait
+	->	E	_Vectors_InitIrqLevels
+	->	E	_ZeroPosSMC
+#
+        10	S	_ButtonCallback
+	->	E	_ButoonPress
+#
+        16	E	_ZPD_Init
+	->	E	_SMC_ZPD_EnableSMC
+	->	E	_SMC_ZPD_Init
+	->	E	_SMC_ZPD_SetADCSampleCount
+	->	E	_SMC_ZPD_SetStepBlindingTime
+	->	E	_SMC_ZPD_SetStepSamplingTime
+	->	E	_SMC_ZPD_Start
+#
+        16	E	_SMC_ZPD_StallDetected
+	->	E	_SMC_ZPD_GetStallData
+	->	E	_StopStepper
+#
+         6	E	_StopStepper
+	->	E	_SMC_ZPD_Stop

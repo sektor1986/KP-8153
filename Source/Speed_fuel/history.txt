@@ -1,0 +1,96 @@
+1. Latest Revision(at 2012.12.26)
+
+file                          revision
+---------------------------------------------------------------------------
+start.asm                     V01L06
+main.c                        V01L01
+vectors.c                     V01L01
+ChangeHighSpeed_before4.prc   V01L01
+ChangeHighSpeed_before8.prc   V01L01
+ChangeHighSpeed_after.prc     V01L01
+romconst.prc                  V01L01
+---------------------------------------------------------------------------
+
+2. History
+
+2.1 start.asm
+Date       revision Description
+---------------------------------------------------------------------------
+2011-06-10  V00L01  Preliminary version
+2011-06-20  V00L02  Preliminary version 2
+                     -Comment change in section 6.4
+                     -The setting of clock stabilization time(CKSSR) is moved
+                      from section 6.10 to the head of section 6.4.
+                     -To enable Sub-Clock, SCE, bit7 of CKSR, is changed to 1.
+                      (Two places in section 6.4)
+2011-06-28  V00L03  Preliminary version 3
+                     -changed section 6.6, 6.7 and 6.8
+2011-07-15  V00L04  Preliminary version 4
+                     -changed section 6.6, 6.7 and 6.8
+2011-08-30  V00L05  Preliminary version 5
+                     -changed section 5.3,5.4,5.6,5.7,5.8 and 5.11
+                      There are interspaces in the section of ROM building block in some places.
+                      When disposing it automatically, CODE and CONST might be disposed to the interspaces.
+                      To prevent it, they are buried with 0xFF etc.
+                     -changed section 6.6
+                      Logical mistake correction
+2011-10-26  V01L01  V00L05 is replaced with V01L01
+2011-12-07  V01L02  -The error in writing of the marker value for Flash security disabled is corrected.
+                      (marker value:0x6666 -> 0xFFFF)
+2012-01-12  V01L03  -Removed some of the comments (line 545).
+2012-03-29  V01L04  -Removed some of the comments (line 706).
+2012-04-26  V01L05  -changed section 4.5
+                     Add clock setting.CPU_24MHZ_CLKP1_16MHZ_CLKP2_16MHZ
+                    -changed section 6.4 and 6.10
+                     Add clock setting.CPU_24MHZ_CLKP1_16MHZ_CLKP2_16MHZ
+2012-12-17  V01L06  -change section No.(5.13->5.14,5.14->5.15,5.15->5.16)
+                    -additon of section 5.13(Declaration of RAMCODE section and labels)
+
+2.2 main.c
+Date       revision Description
+---------------------------------------------------------------------------
+2011-06-10  V00L01  Preliminary version
+2011-06-20  V00L02  Preliminary version 2
+                     -Comment addition
+2011-06-28  V00L03  Preliminary version 3
+                     -removed function(Vectors_InitIrqLevels)
+2011-07-15  V00L04  Preliminary version 4
+                     -changed comment
+2011-08-30  V00L05  Preliminary version 5
+2011-10-26  V01L01  V00L05 is replaced with V01L01
+                     -changed register name (WDTCP -> WDTCP_)
+
+2.3 vector.c
+Date       revision Description
+---------------------------------------------------------------------------
+2011-06-10  V00L01  Preliminary version
+2011-06-20  V00L02  Preliminary version 2
+2011-06-28  V00L03  Preliminary version 3
+                     -removed function(Vectors_InitIrqLevels)
+2011-07-15  V00L04  Preliminary version 4
+                     -changed comment
+2011-08-30  V00L05  Preliminary version 5
+                     -removed a comment
+2011-10-26  V01L01  V00L05 is replaced with V01L01
+
+2.4 ChangeHighSpeed_before4.prc
+Date       revision Description
+---------------------------------------------------------------------------
+2012-01-12  V01L01  -first edition
+
+2.5 ChangeHighSpeed_before8.prc
+Date       revision Description
+---------------------------------------------------------------------------
+2012-01-12  V01L01  -first edition
+
+2.6 ChangeHighSpeed_after.prc
+Date       revision Description
+---------------------------------------------------------------------------
+2012-01-12  V01L01  -first edition
+
+2.7 romconst.prc
+Date       revision Description
+---------------------------------------------------------------------------
+2011-08-30  V00L05  Preliminary version 5
+2011-10-26  V01L01  V00L05 is replaced with V01L01
+                     -added a version notation

@@ -1,0 +1,15 @@
+@e:\sektor\git_project\kp-8153\source\speed_fuel\src\driver\icu.c
+#  E=Extern  S=Static  I=Interrupt
+#   {Stack}    {E|S|I} {function name} [A]
+#       ->     {E|S}   {call function}
+#               ...
+#
+         2	E	_InitFRTimer0
+#
+         6	E	_InitICU1
+	->	E	_InitFRTimer0
+#
+        14	I	_FRT0_IRQ
+#
+        28	I	_ICU1_IRQ
+	->	E	_abs

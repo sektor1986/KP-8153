@@ -1,0 +1,71 @@
+  [History]
+   V01L01  13 Dec 2010 - created
+   V01L02  21 Feb 2011 - PRRR13(0x663) addition
+   V01L03  10 Mar 2011 - Bit change in the following register.
+                         ECCR0(0xC4),ECCR1(0xCE),NMI(0x3A5),PLLCR(0x406),
+                         LECR(0x627)
+                       - Change of register name of the following register.
+                         GNCR(0xEC)->GCNR0(0xEC)
+                       - The following register deletion.
+                         DFWC0B(0x3F8),DFWC1B(0x3FC),DFSECA(0x3FE),
+                         DFSECB(0x3FF)
+                       - The following register addition.
+                         GCN30(0xE9300),GCN40(0xE9302),GCN50(0xE9304),
+                         EPCN20(0xE9310),PTPC0(0xE9314),
+                         EPCN21(0xE9320),PTPC1(0xE9324),
+                         EPCN22(0xE9330),PTPC2(0xE9334),
+                         EPCN23(0xE9340),PTPC3(0xE9344),
+                         PDCR08(0xE9898)
+   V01L04  18 Oct 2011 - product addition and the consequent change
+                       - change the description of bank-E I/O
+                         (GCN30:0xE9300~) of mb96670.h
+                       - WDT(0x40E-0x40F) addition
+                         definition change of WDTC(0x40E) and WDTCP(0x40F)
+                         according to the above-mentioned
+                       - register name change
+                         WTBR_ML(0x4E0-0x4E1)->WTBRL0(0x4E0),WTBRH0(0x4E1),
+                         WTBR_H(0x4E2)->WTBR1(0x4E2)
+                       - definition change
+                         WTSR(0x4E3),WTMR(0x4E4),WTHR(0x4E5),
+                         ADCC040(0xE9554),ADCC060(0xE9556),ADCC080(0xE9558),
+                         ADCC090(0xE9559),ADCC100(0xE955A),ADCC110(0xE955B),
+                         ADRCOIRS10(0xE9541),ADRCOIRS20(0xE9542),
+                         ADRCOOF10(0xB55),ADRCOOF20(0xB56),
+                         ADRCOINTF10(0xB5D),ADRCOINTF20(0xB5E),
+                         ADPCIE10(0xB65),ADPCIE20(0xB66),
+                         ADPCZF10(0xB69),ADPCZF20(0xB6A),
+                         ADDSCR10(0xE9541),ADDSCR20(0xE9542)
+                       - macro definition addition(mb96670.h)
+                         TMRLR1(0x66),TMRLR2(0x6A),TMRLR6(0x72),
+                         UART0_TDR0(0xC2),UART1_TDR1(0xCC)
+   V01L05  14 Jun 2012 - Bit definition correction of the following register
+                         TMISR(0x4FA):TMS0-5->TMIS0-5
+                       - register name change of the following register
+                         ADCRLH(0x1A-0x1B) -> ADCR(0x1A-0x1B)
+                         BPAML0(0x100-0x101) -> BAPL0(0x100),BAPM0(0x101)
+                         BPAML1(0x108-0x109) -> BAPL1(0x108),BAPM1(0x109)
+                         CUTR -> CUTR2(0x4EE-0x4EF),CUTR1(0x4F0-0x4F1)
+                         GCN50(0xE9304) -> GCN5L0(0xE9304)
+                         EPCN20(0xE9310) -> EPCN2L0(0xE9310)
+                         EPCN21(0xE9320) -> EPCN2L1(0xE9320)
+                         EPCN22(0xE9330) -> EPCN2L2(0xE9330)
+                         EPCN23(0xE9340) -> EPCN2L3(0xE9340)
+                       - Bit definition change of the following register
+                         GCNR0(0xEC)
+                       - BIE bit addition of the following register
+                         ECCR0(0xC4),ECCR1(0xCE)
+   V01L06  22 Jun 2012 - addition of following register
+                         DSUCR(0xBF0),UER(0xBF4),MBR(0xBF6)
+   V01L07  04 Jul 2012 - change a part of macro name of following register
+                         EPCN2L0(0xE9310),EPCN2L1(0xE9320),EPCN2L2(0xE9330),
+                         EPCN2L3(0xE9340)
+                       - WFGG(bit13) deletion of EPCN1n
+                         EPCN10(0xA80-0xA81),EPCN11(0xA82-0xA83),
+                         EPCN12(0xA84-0xA85),EPCN13(0xA86-0xA87)
+                       - Bit definition change of the following register
+                         ADER1(0x4D1),
+                         PWC10(0x5E2-0x5E3),PWC20(0x5E4-0x5E5)
+   V01L08  17 Jul 2012 - definition change of the following register
+                         IOABK0(0xA00),IOABK1(0xA01)
+   V01L09  10 Oct 2012 - deletion of the following register
+                         GCN30(0xE9300)

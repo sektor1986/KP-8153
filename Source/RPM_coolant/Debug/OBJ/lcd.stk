@@ -1,0 +1,36 @@
+@e:\sektor\git_project\kp-8153\source\rpm_coolant\src\driver\lcd.c
+#  E=Extern  S=Static  I=Interrupt
+#   {Stack}    {E|S|I} {function name} [A]
+#       ->     {E|S}   {call function}
+#               ...
+#
+         2	E	_InitLCD
+#
+         4	E	_segment1
+#
+         4	E	_segment2
+#
+         4	E	_segment3
+#
+         4	E	_segment4
+#
+        14	E	_NumToTopStr
+	->	E	_ToBCD
+	->	E	_segment1
+	->	E	_segment2
+	->	E	_segment3
+	->	E	_segment4
+#
+        14	E	_NumToTopStr3
+	->	E	_ToBCD
+	->	E	_segment2
+	->	E	_segment3
+	->	E	_segment4
+#
+         8	E	_ClearTopLine
+	->	E	_segment1
+	->	E	_segment2
+	->	E	_segment3
+	->	E	_segment4
+#
+         2	E	_Disable_simbols

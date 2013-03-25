@@ -1,0 +1,234 @@
+[Version]
+DLLVer=02.3007.00.1
+PRJVer=1
+
+[PRJKIND]
+mode=1
+
+[CPUTYPE]
+CpuSerise=907
+
+[PrjInfo]
+Count=1
+PrjInfo-0=Debug
+Active=Debug
+
+[MEMBER]
+F0=34
+F1=0 f Source Files
+F2=0 c src\_ffmc16.c
+F3=0 c src\driver_update.c
+F4=0 c src\geometry.c
+F5=0 c src\main.c
+F6=0 a src\start.asm
+F7=0 c src\timer.c
+F8=0 c src\utils.c
+F9=0 c src\vectors.c
+F10=0 f Source Files\driver
+F11=0 c src\Driver\adc.c
+F12=0 c src\Driver\backlight.c
+F13=0 c src\Driver\button.c
+F14=0 c src\Driver\flash.c
+F15=0 c src\Driver\i2c_master.c
+F16=0 c src\Driver\i2c_slave.c
+F17=0 c src\Driver\icu.c
+F18=0 c src\Driver\lcd.c
+F19=0 c src\mb96670_smc_zpd\mb96670_smc_zpd.c
+F20=0 c src\Driver\smc.c
+F21=0 f Include Files
+F22=0 h src\driver_update.h
+F23=0 h src\mcu.h
+F24=0 h src\timer.h
+F25=0 h src\vectors.h
+F26=0 f Include Files\driver
+F27=0 h src\Driver\adc.h
+F28=0 h src\Driver\backlight.h
+F29=0 h src\Driver\button.h
+F30=0 h src\Driver\extern_i2c.h
+F31=0 h src\Driver\icu.h
+F32=0 h src\Driver\lcd.h
+F33=0 h src\mb96670_smc_zpd\mb96670_smc_zpd.h
+F34=0 h src\Driver\smc.h
+
+[OPTIONFILE]
+FILE=data.dat
+
+[CPUTYPE-Debug]
+CsvFile=Lib\907\907.csv
+CpuName=MB96F673AB
+Count=0
+
+[DirInfo-Debug]
+CONFIG=Debug\
+OBJ=Debug\OBJ\
+LST=Debug\LST\
+OPT=Debug\OPT\
+
+[MEMBER-Debug]
+F0=19
+F1=0 m 1 Debug\ABS\KP8153_speed_fuel.abs
+F2=0 a 1 src\start.asm
+F3=11 c 1 src\main.c
+F3-1=- src\driver\adc.h
+F3-2=- src\mb96670.h
+F3-3=- src\timer.h
+F3-4=- src\base_types.h
+F3-5=- C:\Program Files\Softune16\LIB\907\INCLUDE\stddef.h
+F3-6=- src\fstdint.h
+F3-7=- src\vectors.h
+F3-8=- src\mb96670_smc_zpd\mb96670_smc_zpd.h
+F3-9=- src\options.h
+F3-10=- src\driver\button.h
+F3-11=- src\_ffmc16.h
+F4=10 c 1 src\vectors.c
+F4-1=- src\timer.h
+F4-2=- src\base_types.h
+F4-3=- C:\Program Files\Softune16\LIB\907\INCLUDE\stddef.h
+F4-4=- src\fstdint.h
+F4-5=- src\_ffmc16.h
+F4-6=- src\mb96670.h
+F4-7=- src\mb96670_smc_zpd\mb96670_smc_zpd.h
+F4-8=- src\driver\icu.h
+F4-9=- src\driver\backlight.h
+F4-10=- src\driver\extern_i2c.h
+F5=2 c 1 src\_ffmc16.c
+F5-1=- src\_ffmc16.h
+F5-2=- src\mb96670.h
+F6=3 c 1 src\Driver\adc.c
+F6-1=- src\driver\adc.h
+F6-2=- src\mcu.h
+F6-3=- src\mb96670.h
+F7=6 c 1 src\timer.c
+F7-1=- src\timer.h
+F7-2=- src\base_types.h
+F7-3=- C:\Program Files\Softune16\LIB\907\INCLUDE\stddef.h
+F7-4=- src\fstdint.h
+F7-5=- src\mcu.h
+F7-6=- src\mb96670.h
+F8=5 c 1 src\Driver\smc.c
+F8-1=- src\mcu.h
+F8-2=- src\mb96670.h
+F8-3=- src\driver\smc.h
+F8-4=- src\fstdint.h
+F8-5=- src\options.h
+F9=9 c 1 src\mb96670_smc_zpd\mb96670_smc_zpd.c
+F9-1=- src\mb96670_smc_zpd\mb96670_smc_zpd.h
+F9-2=- src\mb96670_smc_zpd\zpd_settings.h
+F9-3=- src\driver\smc.h
+F9-4=- src\driver\adc.h
+F9-5=- src\base_types.h
+F9-6=- C:\Program Files\Softune16\LIB\907\INCLUDE\stddef.h
+F9-7=- src\fstdint.h
+F9-8=- src\mcu.h
+F9-9=- src\mb96670.h
+F10=7 c 1 src\Driver\button.c
+F10-1=- src\driver\button.h
+F10-2=- src\base_types.h
+F10-3=- C:\Program Files\Softune16\LIB\907\INCLUDE\stddef.h
+F10-4=- src\fstdint.h
+F10-5=- src\mcu.h
+F10-6=- src\mb96670.h
+F10-7=- src\timer.h
+F11=15 c 1 src\driver_update.c
+F11-1=- src\mcu.h
+F11-2=- src\mb96670.h
+F11-3=- src\driver\button.h
+F11-4=- src\base_types.h
+F11-5=- C:\Program Files\Softune16\LIB\907\INCLUDE\stddef.h
+F11-6=- src\fstdint.h
+F11-7=- src\driver_update.h
+F11-8=- src\timer.h
+F11-9=- src\driver\flash.h
+F11-10=- src\driver\adc.h
+F11-11=- src\driver\icu.h
+F11-12=- src\driver\lcd.h
+F11-13=- src\driver\smc.h
+F11-14=- src\geometry.h
+F11-15=- src\driver\extern_i2c.h
+F12=3 c 1 src\Driver\flash.c
+F12-1=- src\mcu.h
+F12-2=- src\mb96670.h
+F12-3=- src\driver\flash.h
+F13=3 c 1 src\Driver\icu.c
+F13-1=- src\mcu.h
+F13-2=- src\mb96670.h
+F13-3=- src\driver\icu.h
+F14=4 c 1 src\Driver\backlight.c
+F14-1=- src\mcu.h
+F14-2=- src\mb96670.h
+F14-3=- src\driver\backlight.h
+F14-4=- src\driver\adc.h
+F15=4 c 1 src\Driver\lcd.c
+F15-1=- src\mcu.h
+F15-2=- src\mb96670.h
+F15-3=- src\utils.h
+F15-4=- src\driver\lcd.h
+F16=1 c 1 src\utils.c
+F16-1=- src\utils.h
+F17=1 c 1 src\geometry.c
+F17-1=- src\geometry.h
+F18=3 c 1 src\Driver\i2c_master.c
+F18-1=- src\mcu.h
+F18-2=- src\mb96670.h
+F18-3=- src\driver\extern_i2c.h
+F19=3 c 1 src\Driver\i2c_slave.c
+F19-1=- src\mcu.h
+F19-2=- src\mb96670.h
+F19-3=- src\driver\extern_i2c.h
+
+[BUILDMODE-Debug]
+kernel=1
+ABI=0
+
+[RUNSET-Debug]
+CONVERT=1
+CONVERTKIND=0
+
+[DebState-Debug]
+SupCount=3
+Supfile-0=Debug\Simulator.sup
+Supfile-1=Debug\MB2100-01-E_4MHz.sup
+Supfile-2=Debug\MB2100-01-E_8MHz.sup
+Current=Simulator.sup
+AliasFile=
+CPURunMode=16,16,16,16,0,1,0x0:0x0,,0,0xFF
+BROMCount=1
+BootROMPathList0=C:\Program Files\Softune16\Lib\907\BootROM
+BootROMMode=1
+
+[AsmBefore]
+Count=0
+
+[AsmAfter]
+Count=0
+
+[CcBefore]
+Count=0
+
+[CcAfter]
+Count=0
+
+[LnkBefore]
+Count=0
+
+[LnkAfter]
+Count=0
+
+[LibBefore]
+Count=0
+
+[LibAfter]
+Count=0
+
+[CnvBefore]
+Count=0
+
+[CnvAfter]
+Count=0
+
+[ConfigBefore]
+Count=0
+
+[ConfigAfter]
+Count=0
+

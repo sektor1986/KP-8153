@@ -1,0 +1,9 @@
+@e:\sektor\git_project\kp-8153\source\speed_fuel\src\driver\adc.c
+#  E=Extern  S=Static  I=Interrupt
+#   {Stack}    {E|S|I} {function name} [A]
+#       ->     {E|S}   {call function}
+#               ...
+#
+         2	E	_InitADC
+#
+         6	E	_ADC_IRQ

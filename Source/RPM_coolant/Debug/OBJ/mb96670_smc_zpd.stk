@@ -1,0 +1,56 @@
+@e:\sektor\git_project\kp-8153\source\rpm_coolant\src\mb96670_smc_zpd\mb96670_smc_zpd.c
+#  E=Extern  S=Static  I=Interrupt
+#   {Stack}    {E|S|I} {function name} [A]
+#       ->     {E|S}   {call function}
+#               ...
+#
+         6	E	_SMC_ZPD_Init
+#
+         2	E	_SMC_ZPD_SetStepBlindingTime
+#
+         2	E	_SMC_ZPD_SetStepSamplingTime
+#
+         2	E	_SMC_ZPD_SetADCSampleCount
+#
+         6	E	_SMC_ZPD_EnableSMC
+#
+         4	E	_SMC_ZPD_DisableSMC
+#
+        18	E	_SMC_ZPD_Start
+	->	E	MULUL
+	->	E	_SMC_ZPD_Stop
+#
+         6	E	_SMC_ZPD_Stop
+#
+         4	E	_SMC_ZPD_GetStallData
+#
+         2	E	_SMC_ZPD_SetTestSignal_StepBlindingTime
+#
+         2	E	_SMC_ZPD_SetTestSignal_StepSamplingTime
+#
+         4	E	_SMC_ZPD_SetTestSignal_ADCSampling
+#
+         4	E	_SMC_ZPD_SetTestSignal_StallDetected
+#
+         6	E	_SMC_ZPD_SetFormThreshold
+#
+         4	E	_SMC_ZPD_GetInformation
+#
+        10	S	_StartADCSampling
+#
+        34	S	_EvaluateBEMFSignal
+#
+        20	E	_SMC_pzd
+	->	*	$pointer_call
+	->	S	_StartADCSampling
+#
+        22	I	_ISR_RLT2
+	->	E	_SMC_IRQ
+	->	E	_SMC_pzd
+#
+        10	E	_ADC_zpd
+	->	S	_EvaluateBEMFSignal
+#
+        22	I	_ISR_ADC
+	->	E	_ADC_IRQ
+	->	E	_ADC_zpd

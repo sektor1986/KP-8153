@@ -1,0 +1,26 @@
+-dt s,d,r,a
+-pl 60
+-pw 132
+-g
+-cwno
+-cpu MB96F673AB
+"E:\sektor\GIT_project\KP-8153\Source\Speed_fuel\Debug\ABS\KP8153_speed_fuel.abs"
+-a "E:\sektor\GIT_project\KP-8153\Source\Speed_fuel\Debug\OBJ\start.obj"
+-a "E:\sektor\GIT_project\KP-8153\Source\Speed_fuel\Debug\OBJ\main.obj"
+-a "E:\sektor\GIT_project\KP-8153\Source\Speed_fuel\Debug\OBJ\vectors.obj"
+-a "E:\sektor\GIT_project\KP-8153\Source\Speed_fuel\Debug\OBJ\_ffmc16.obj"
+-a "E:\sektor\GIT_project\KP-8153\Source\Speed_fuel\Debug\OBJ\adc.obj"
+-a "E:\sektor\GIT_project\KP-8153\Source\Speed_fuel\Debug\OBJ\timer.obj"
+-a "E:\sektor\GIT_project\KP-8153\Source\Speed_fuel\Debug\OBJ\smc.obj"
+-a "E:\sektor\GIT_project\KP-8153\Source\Speed_fuel\Debug\OBJ\mb96670_smc_zpd.obj"
+-a "E:\sektor\GIT_project\KP-8153\Source\Speed_fuel\Debug\OBJ\button.obj"
+-a "E:\sektor\GIT_project\KP-8153\Source\Speed_fuel\Debug\OBJ\driver_update.obj"
+-a "E:\sektor\GIT_project\KP-8153\Source\Speed_fuel\Debug\OBJ\flash.obj"
+-a "E:\sektor\GIT_project\KP-8153\Source\Speed_fuel\Debug\OBJ\icu.obj"
+-a "E:\sektor\GIT_project\KP-8153\Source\Speed_fuel\Debug\OBJ\backlight.obj"
+-a "E:\sektor\GIT_project\KP-8153\Source\Speed_fuel\Debug\OBJ\lcd.obj"
+-a "E:\sektor\GIT_project\KP-8153\Source\Speed_fuel\Debug\OBJ\utils.obj"
+-a "E:\sektor\GIT_project\KP-8153\Source\Speed_fuel\Debug\OBJ\geometry.obj"
+-a "E:\sektor\GIT_project\KP-8153\Source\Speed_fuel\Debug\OBJ\i2c_master.obj"
+-a "E:\sektor\GIT_project\KP-8153\Source\Speed_fuel\Debug\OBJ\i2c_slave.obj"
+

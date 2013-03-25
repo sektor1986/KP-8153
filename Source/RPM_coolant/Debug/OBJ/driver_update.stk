@@ -1,0 +1,64 @@
+@e:\sektor\git_project\kp-8153\source\rpm_coolant\src\driver_update.c
+#  E=Extern  S=Static  I=Interrupt
+#   {Stack}    {E|S|I} {function name} [A]
+#       ->     {E|S}   {call function}
+#               ...
+#
+        16	E	_DriverInit
+	->	E	_InitLCD
+	->	E	_InitMode
+	->	E	_LoadAllParams
+	->	E	_Timer_Start
+#
+        10	E	_InitMode
+	->	E	_ClearTopLine
+	->	E	_Disable_simbols
+	->	E	_segment1
+#
+        24	S	_UdateLCD
+	->	E	DTOF
+	->	E	DTOUL
+	->	E	FADDL
+	->	E	FMULL
+	->	E	FTESTL
+	->	E	FTOD
+	->	E	UITOD
+	->	E	_NumToTopStr
+	->	E	_NumToTopStr3
+	->	S	_UpdateTime
+#
+        24	S	_UpdateSMC
+	->	E	DTOL
+	->	E	FMULL
+	->	E	UITOD
+#
+         6	S	_DriverUpdate
+	->	S	_UdateLCD
+	->	S	_UpdateSMC
+	->	S	_UpdateStateEngine
+#
+         4	S	_UpdateStateEngine
+#
+         2	S	_Timer_1s
+#
+         2	S	_Timer_60s
+#
+        14	E	_ButtonCallback
+	->	E	_InitMode
+#
+        12	S	_UpdateTime
+	->	E	_segment1
+	->	E	_segment2
+	->	E	_segment3
+	->	E	_segment4
+#
+        30	E	_LoadAllParams
+	->	E	_Data_flash_SectorErase
+	->	E	_SaveAllParamsSecondary
+#
+        32	E	_SaveAllParams
+	->	E	_Data_Flash_write
+#
+        32	E	_SaveAllParamsSecondary
+	->	E	_Data_Flash_write
+	->	E	_Data_flash_SectorErase

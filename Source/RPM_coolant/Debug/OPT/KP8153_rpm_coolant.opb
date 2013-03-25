@@ -1,0 +1,28 @@
+-dt s,d,r,a
+-pl 60
+-pw 132
+-g
+-cwno
+-cpu MB96F673RB
+"E:\sektor\GIT_project\KP-8153\Source\RPM_coolant\Debug\ABS\KP8153_rpm_coolant.abs"
+-a "E:\sektor\GIT_project\KP-8153\Source\RPM_coolant\Debug\OBJ\start.obj"
+-a "E:\sektor\GIT_project\KP-8153\Source\RPM_coolant\Debug\OBJ\main.obj"
+-a "E:\sektor\GIT_project\KP-8153\Source\RPM_coolant\Debug\OBJ\vectors.obj"
+-a "E:\sektor\GIT_project\KP-8153\Source\RPM_coolant\Debug\OBJ\_ffmc16.obj"
+-a "E:\sektor\GIT_project\KP-8153\Source\RPM_coolant\Debug\OBJ\adc.obj"
+-a "E:\sektor\GIT_project\KP-8153\Source\RPM_coolant\Debug\OBJ\button.obj"
+-a "E:\sektor\GIT_project\KP-8153\Source\RPM_coolant\Debug\OBJ\flash.obj"
+-a "E:\sektor\GIT_project\KP-8153\Source\RPM_coolant\Debug\OBJ\icu.obj"
+-a "E:\sektor\GIT_project\KP-8153\Source\RPM_coolant\Debug\OBJ\smc.obj"
+-a "E:\sektor\GIT_project\KP-8153\Source\RPM_coolant\Debug\OBJ\mb96670_smc_zpd.obj"
+-a "E:\sektor\GIT_project\KP-8153\Source\RPM_coolant\Debug\OBJ\driver_update.obj"
+-a "E:\sektor\GIT_project\KP-8153\Source\RPM_coolant\Debug\OBJ\timer.obj"
+-a "E:\sektor\GIT_project\KP-8153\Source\RPM_coolant\Debug\OBJ\can.obj"
+-a "E:\sektor\GIT_project\KP-8153\Source\RPM_coolant\Debug\OBJ\j1939.obj"
+-a "E:\sektor\GIT_project\KP-8153\Source\RPM_coolant\Debug\OBJ\i2c_master.obj"
+-a "E:\sektor\GIT_project\KP-8153\Source\RPM_coolant\Debug\OBJ\i2c_slave.obj"
+-a "E:\sektor\GIT_project\KP-8153\Source\RPM_coolant\Debug\OBJ\lcd.obj"
+-a "E:\sektor\GIT_project\KP-8153\Source\RPM_coolant\Debug\OBJ\rtc.obj"
+-a "E:\sektor\GIT_project\KP-8153\Source\RPM_coolant\Debug\OBJ\utils.obj"
+-a "E:\sektor\GIT_project\KP-8153\Source\RPM_coolant\Debug\OBJ\sound.obj"
+

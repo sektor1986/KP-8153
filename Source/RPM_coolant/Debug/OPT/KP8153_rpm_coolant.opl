@@ -1,0 +1,45 @@
+-g
+-AL 2
+-ra _INRAM01=0x007200/0x007FFF
+-ro _INROM02=0xFF0000/0xFFFFFF
+-ro _INROM03=0xDF2000/0xDF9FFF
+-sc CONST/const/BYTE=0xFF8000
+-check_rora
+-check_locate
+-rg 0
+-m "E:\sektor\GIT_project\KP-8153\Source\RPM_coolant\Debug\LST\KP8153_rpm_coolant.mp1"
+-pl 60
+-pw 132
+-alin "E:\sektor\GIT_project\KP-8153\Source\RPM_coolant\Debug\LST"
+-alout "E:\sektor\GIT_project\KP-8153\Source\RPM_coolant\Debug\LST"
+-Xals
+-Xalr
+-na
+-w 1
+-Xset_rora
+-cwno
+-a
+-cpu MB96F673RB
+-o "E:\sektor\GIT_project\KP-8153\Source\RPM_coolant\Debug\ABS\KP8153_rpm_coolant.abs"
+
+"E:\sektor\GIT_project\KP-8153\Source\RPM_coolant\Debug\OBJ\start.obj"
+"E:\sektor\GIT_project\KP-8153\Source\RPM_coolant\Debug\OBJ\main.obj"
+"E:\sektor\GIT_project\KP-8153\Source\RPM_coolant\Debug\OBJ\vectors.obj"
+"E:\sektor\GIT_project\KP-8153\Source\RPM_coolant\Debug\OBJ\_ffmc16.obj"
+"E:\sektor\GIT_project\KP-8153\Source\RPM_coolant\Debug\OBJ\adc.obj"
+"E:\sektor\GIT_project\KP-8153\Source\RPM_coolant\Debug\OBJ\button.obj"
+"E:\sektor\GIT_project\KP-8153\Source\RPM_coolant\Debug\OBJ\flash.obj"
+"E:\sektor\GIT_project\KP-8153\Source\RPM_coolant\Debug\OBJ\icu.obj"
+"E:\sektor\GIT_project\KP-8153\Source\RPM_coolant\Debug\OBJ\smc.obj"
+"E:\sektor\GIT_project\KP-8153\Source\RPM_coolant\Debug\OBJ\mb96670_smc_zpd.obj"
+"E:\sektor\GIT_project\KP-8153\Source\RPM_coolant\Debug\OBJ\driver_update.obj"
+"E:\sektor\GIT_project\KP-8153\Source\RPM_coolant\Debug\OBJ\timer.obj"
+"E:\sektor\GIT_project\KP-8153\Source\RPM_coolant\Debug\OBJ\can.obj"
+"E:\sektor\GIT_project\KP-8153\Source\RPM_coolant\Debug\OBJ\j1939.obj"
+"E:\sektor\GIT_project\KP-8153\Source\RPM_coolant\Debug\OBJ\i2c_master.obj"
+"E:\sektor\GIT_project\KP-8153\Source\RPM_coolant\Debug\OBJ\i2c_slave.obj"
+"E:\sektor\GIT_project\KP-8153\Source\RPM_coolant\Debug\OBJ\lcd.obj"
+"E:\sektor\GIT_project\KP-8153\Source\RPM_coolant\Debug\OBJ\rtc.obj"
+"E:\sektor\GIT_project\KP-8153\Source\RPM_coolant\Debug\OBJ\utils.obj"
+"E:\sektor\GIT_project\KP-8153\Source\RPM_coolant\Debug\OBJ\sound.obj"
+

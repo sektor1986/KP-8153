@@ -1,0 +1,59 @@
+@e:\sektor\git_project\kp-8153\source\speed_fuel\src\driver\lcd.c
+#  E=Extern  S=Static  I=Interrupt
+#   {Stack}    {E|S|I} {function name} [A]
+#       ->     {E|S}   {call function}
+#               ...
+#
+         2	E	_InitLCD
+#
+         4	E	_segment1
+#
+         4	E	_segment2
+#
+         4	E	_segment3
+#
+         4	E	_segment4
+#
+         4	E	_segment5
+#
+         4	E	_segment6
+#
+         4	E	_segment7
+#
+         4	E	_segment8
+#
+         4	E	_segment9
+#
+         4	E	_segment10
+#
+        14	E	_NumToTopStr
+	->	E	_ToBCD
+	->	E	_segment10
+	->	E	_segment5
+	->	E	_segment6
+	->	E	_segment7
+	->	E	_segment8
+	->	E	_segment9
+#
+        14	E	_NumToBottomStr
+	->	E	_ToBCD
+	->	E	_segment1
+	->	E	_segment2
+	->	E	_segment3
+	->	E	_segment4
+#
+         8	E	_ClearTopLine
+	->	E	_segment10
+	->	E	_segment5
+	->	E	_segment6
+	->	E	_segment7
+	->	E	_segment8
+	->	E	_segment9
+#
+         8	E	_ClearBottomLine
+	->	E	_segment1
+	->	E	_segment2
+	->	E	_segment3
+	->	E	_segment4
+#
+         2	E	_Disable_simbols

@@ -1,0 +1,26 @@
+@e:\sektor\git_project\kp-8153\source\rpm_coolant\src\timer.c
+#  E=Extern  S=Static  I=Interrupt
+#   {Stack}    {E|S|I} {function name} [A]
+#       ->     {E|S}   {call function}
+#               ...
+#
+         2	E	_Timer_Init
+#
+         2	E	_Timer_Disable
+#
+        10	E	_Timer_Start
+#
+        16	E	_Timer_Main
+	->	*	$pointer_call
+	->	E	MULL
+#
+         2	E	_Timer_Remaining
+#
+         6	E	_Timer_IsElapsed
+#
+        16	E	_Timer_Wait
+	->	E	_Timer_IsElapsed
+	->	E	_Timer_Start
+#
+        30	I	_Timer_Isr_MainClockTimer
+	->	E	MULL

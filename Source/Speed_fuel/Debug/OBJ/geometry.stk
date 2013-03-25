@@ -1,0 +1,10 @@
+@e:\sektor\git_project\kp-8153\source\speed_fuel\src\geometry.c
+#  E=Extern  S=Static  I=Interrupt
+#   {Stack}    {E|S|I} {function name} [A]
+#       ->     {E|S}   {call function}
+#               ...
+#
+        14	E	_ValueLine
+	->	E	FADD
+	->	E	FDIV
+	->	E	FMUL

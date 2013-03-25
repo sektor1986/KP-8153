@@ -1,0 +1,111 @@
+$CPUSERIES-907
+$Prj-Debug
+$0
+-g
+-w 1
+-I "src"
+-I "src/driver"
+-I "src/mb96670_smc_zpd"
+-O 0
+-model MEDIUM
+-B
+-Xdof
+-INF STACK
+-K NOUNROLL
+$other
+$time
+1358943440
+$end
+$src\_ffmc16.c,0
+-g
+-w 1
+-O 0
+-model MEDIUM
+-B
+-Xdof
+-INF STACK
+-K NOUNROLL
+$other
+-Xinittbl
+$time
+1358927339
+$end
+$1
+-linf ON
+-lsrc ON
+-lsec ON
+-lcros OFF
+-linc ON
+-lexp OBJ
+-pl 60
+-pw 100
+-tab 8
+-w 2
+-g
+-Xdof
+$other
+$time
+1358927339
+$end
+$src\start.asm,1
+-g
+-w 0
+-linf ON
+-lsrc ON
+-lsec ON
+-lcros OFF
+-linc ON
+-lexp OBJ
+-pl 60
+-pw 100
+-tab 8
+-Xdof
+$other
+$time
+1358927339
+$end
+$2
+-g
+-AL 2
+-ra _INRAM01=0x007200/0x007FFF
+-ro _INROM02=0xFF0000/0xFFFFFF
+-ro _INROM03=0xDF2000/0xDF9FFF
+-sc CONST/const/BYTE=0xFF8000
+-check_rora
+-check_locate
+-rg 0
+-m
+-pl 60
+-pw 132
+-Xals
+-Xalr
+-na
+-w 1
+-Xdof
+$other
+$time
+1359100703
+$end
+$3
+-dt s,d,r,a
+-pl 60
+-pw 132
+-g
+-Xdof
+$other
+$time
+1359100703
+$end
+$4
+-Xdof
+$other
+$time
+1358927339
+$end
+$5
+$other
+$time
+1358927339
+$end
+$Prjend
+$CPUSERIESEND

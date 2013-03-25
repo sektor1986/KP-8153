@@ -1,0 +1,43 @@
+-g
+-AL 2
+-ra _INRAM01=0x007200/0x007FFF
+-ro _INROM02=0xFF0000/0xFFFFFF
+-ro _INROM03=0xDF2000/0xDF9FFF
+-sc CONST/const/BYTE=0xFF8000
+-check_rora
+-check_locate
+-rg 0
+-m "E:\sektor\GIT_project\KP-8153\Source\Speed_fuel\Debug\LST\KP8153_speed_fuel.mp1"
+-pl 60
+-pw 132
+-alin "E:\sektor\GIT_project\KP-8153\Source\Speed_fuel\Debug\LST"
+-alout "E:\sektor\GIT_project\KP-8153\Source\Speed_fuel\Debug\LST"
+-Xals
+-Xalr
+-na
+-w 1
+-Xset_rora
+-cwno
+-a
+-cpu MB96F673AB
+-o "E:\sektor\GIT_project\KP-8153\Source\Speed_fuel\Debug\ABS\KP8153_speed_fuel.abs"
+
+"E:\sektor\GIT_project\KP-8153\Source\Speed_fuel\Debug\OBJ\start.obj"
+"E:\sektor\GIT_project\KP-8153\Source\Speed_fuel\Debug\OBJ\main.obj"
+"E:\sektor\GIT_project\KP-8153\Source\Speed_fuel\Debug\OBJ\vectors.obj"
+"E:\sektor\GIT_project\KP-8153\Source\Speed_fuel\Debug\OBJ\_ffmc16.obj"
+"E:\sektor\GIT_project\KP-8153\Source\Speed_fuel\Debug\OBJ\adc.obj"
+"E:\sektor\GIT_project\KP-8153\Source\Speed_fuel\Debug\OBJ\timer.obj"
+"E:\sektor\GIT_project\KP-8153\Source\Speed_fuel\Debug\OBJ\smc.obj"
+"E:\sektor\GIT_project\KP-8153\Source\Speed_fuel\Debug\OBJ\mb96670_smc_zpd.obj"
+"E:\sektor\GIT_project\KP-8153\Source\Speed_fuel\Debug\OBJ\button.obj"
+"E:\sektor\GIT_project\KP-8153\Source\Speed_fuel\Debug\OBJ\driver_update.obj"
+"E:\sektor\GIT_project\KP-8153\Source\Speed_fuel\Debug\OBJ\flash.obj"
+"E:\sektor\GIT_project\KP-8153\Source\Speed_fuel\Debug\OBJ\icu.obj"
+"E:\sektor\GIT_project\KP-8153\Source\Speed_fuel\Debug\OBJ\backlight.obj"
+"E:\sektor\GIT_project\KP-8153\Source\Speed_fuel\Debug\OBJ\lcd.obj"
+"E:\sektor\GIT_project\KP-8153\Source\Speed_fuel\Debug\OBJ\utils.obj"
+"E:\sektor\GIT_project\KP-8153\Source\Speed_fuel\Debug\OBJ\geometry.obj"
+"E:\sektor\GIT_project\KP-8153\Source\Speed_fuel\Debug\OBJ\i2c_master.obj"
+"E:\sektor\GIT_project\KP-8153\Source\Speed_fuel\Debug\OBJ\i2c_slave.obj"
+

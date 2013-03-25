@@ -1,0 +1,9 @@
+@e:\sektor\git_project\kp-8153\source\rpm_coolant\src\driver\flash.c
+#  E=Extern  S=Static  I=Interrupt
+#   {Stack}    {E|S|I} {function name} [A]
+#       ->     {E|S}   {call function}
+#               ...
+#
+         6	E	_Data_Flash_write
+#
+         8	E	_Data_flash_SectorErase

@@ -1,0 +1,13 @@
+@e:\sektor\git_project\kp-8153\source\rpm_coolant\src\driver\j1939.c
+#  E=Extern  S=Static  I=Interrupt
+#   {Stack}    {E|S|I} {function name} [A]
+#       ->     {E|S}   {call function}
+#               ...
+#
+        22	E	_J1939_init
+	->	E	DIVUL
+	->	E	_CAN_Init
+	->	E	_CAN_SetupReceiver
+	->	E	_Timer_Start
+#
+         8	S	_J1939_Update

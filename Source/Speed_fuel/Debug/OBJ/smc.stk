@@ -1,0 +1,25 @@
+@e:\sektor\git_project\kp-8153\source\speed_fuel\src\driver\smc.c
+#  E=Extern  S=Static  I=Interrupt
+#   {Stack}    {E|S|I} {function name} [A]
+#       ->     {E|S}   {call function}
+#               ...
+#
+         6	E	_InitSMC
+#
+         2	E	_ZeroPosSMC
+#
+         6	E	_ClearPosSMC
+#
+         2	E	_SmcParamsForReturn
+#
+         2	E	_SmcNormalParams
+#
+         2	E	_SmcTestParams
+#
+        12	E	_smc_out
+#
+         6	E	_smc__lpf
+#
+        14	E	_SMC_IRQ
+	->	E	_smc__lpf
+	->	E	_smc_out

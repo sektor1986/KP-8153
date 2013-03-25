@@ -1,0 +1,13 @@
+@e:\sektor\git_project\kp-8153\source\rpm_coolant\src\driver\button.c
+#  E=Extern  S=Static  I=Interrupt
+#   {Stack}    {E|S|I} {function name} [A]
+#       ->     {E|S}   {call function}
+#               ...
+#
+        24	E	_Button_Init
+	->	E	_Timer_Start
+#
+        10	E	_Button_GetCurrentButtonState
+#
+        20	S	_ScanTimerCallback
+	->	*	$pointer_call

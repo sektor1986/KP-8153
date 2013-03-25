@@ -1,0 +1,56 @@
+[Information]
+DebChangeFlag=1
+MCUChangeFlag=1
+[Version]
+Version=1
+Level=1
+Revision=0
+[Debug Type]
+Type=0
+Virtual CPU File=wv907e5.dll
+Monitor Combination Version=10100
+Mcu Name=MB96F673RB
+Monitor Select Count=0
+Core ID=0
+Monitor Load=1
+Monitor Load Condition=Enable
+ChangeFlag=Disable
+[Device]
+Communication=USB
+ProductID=201A
+Protocol=3
+[Target]
+AutoLoad=Enable
+Before Batch File=prc\ChangeHighSpeed_before4.prc
+After Batch File=prc\ChangeHighSpeed_after.prc
+Main Freq=2
+Main Freq Unit=F4240
+ClockUP Mode=Enable
+PowerSupply=Disable
+StartFlashSync=Enable
+[Start]
+Batch File=
+[Emulation Environment]
+Cable Length=2
+Software Break=1
+Flag=Enable
+[Window]
+Flag=Enable
+[Path Environment]
+Flag=Enable
+[Map]
+Flag=Enable
+[Radix Environment]
+Flag=Enable
+[Watch Environment]
+Flag=Enable
+[Exec Environment]
+Flag=Enable
+[Break Environment]
+Flag=Enable
+[Monitor Environment]
+Flag=Enable
+[Error]
+Flag=Enable
+[Color]
+Flag=Enable
