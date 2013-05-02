@@ -14,6 +14,8 @@
 #
          2	E	_SmcNormalParams
 #
+         2	E	_SmcTestParams
+#
         12	E	_smc_out
 #
          6	E	_smc__lpf

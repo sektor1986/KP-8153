@@ -23,6 +23,13 @@
 #
         14	E	_NumToTopStr3
 	->	E	_ToBCD
+	->	E	_segment1
+	->	E	_segment2
+	->	E	_segment3
+	->	E	_segment4
+#
+        14	E	_NumToTopStr2
+	->	E	_ToBCD
 	->	E	_segment2
 	->	E	_segment3
 	->	E	_segment4
@@ -32,5 +39,7 @@
 	->	E	_segment2
 	->	E	_segment3
 	->	E	_segment4
+#
+         2	E	_Enable_simbols
 #
          2	E	_Disable_simbols

@@ -16,6 +16,8 @@
 #
          2	E	_SmcTestParams
 #
+         2	E	_SmcFuelDemp
+#
         12	E	_smc_out
 #
          6	E	_smc__lpf

@@ -9,7 +9,12 @@
          6	E	_InitICU1
 	->	E	_InitFRTimer0
 #
+         2	E	_InitEI0
+#
         14	I	_FRT0_IRQ
 #
         28	I	_ICU1_IRQ
+	->	E	_abs
+#
+        26	I	_EI0_IRQ
 	->	E	_abs

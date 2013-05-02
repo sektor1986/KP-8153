@@ -24,6 +24,7 @@ void ClearPosSMC(void);
 void ZeroPosSMC(void);
 void SmcParamsForReturn(void);
 void SmcNormalParams(void);
+void SmcTestParams(void);
 void SMC_IRQ (void);
 //__interrupt void SMC_IRQ (void);
 

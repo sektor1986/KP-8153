@@ -2,7 +2,7 @@
 #define __ADC_H
 
 #define ADC_IGNITION         0
-#define ADC_BAT              1
+#define ADC_OIL_PRESS_10     1
 #define ADC_OIL_PRESS_6      4
 #define ADC_COOLANT_TEMP     5
 

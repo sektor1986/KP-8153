@@ -25,4 +25,6 @@
 -a "E:\sektor\GIT_project\KP-8153\Source\RPM_coolant\Debug\OBJ\rtc.obj"
 -a "E:\sektor\GIT_project\KP-8153\Source\RPM_coolant\Debug\OBJ\utils.obj"
 -a "E:\sektor\GIT_project\KP-8153\Source\RPM_coolant\Debug\OBJ\sound.obj"
+-a "E:\sektor\GIT_project\KP-8153\Source\RPM_coolant\Debug\OBJ\geometry.obj"
+-a "E:\sektor\GIT_project\KP-8153\Source\RPM_coolant\Debug\OBJ\initial_set.obj"
 

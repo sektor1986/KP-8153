@@ -4,11 +4,6 @@
 #       ->     {E|S}   {call function}
 #               ...
 #
-         4	E	_init_setting_i2c
-#
-         6	E	_send_data_i2c
-	->	E	_init_i2c_0_master
-#
          6	E	_init_i2c_0_master
 	->	E	_init_i2c_0_master
 #

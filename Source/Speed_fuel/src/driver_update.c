@@ -10,21 +10,28 @@
 #include "geometry.h"
 #include "extern_i2c.h"
 
-#define I2C_ENABLE 0
-
 #define VERS         0                // Версия программы 
 #define USAGE_MEMORY        10        // Количество байт памяти используемых для настроек
 
-#define LOW_FUEL        PDR17_P0 
-#define BRAKE_ERROR     PDR03_P4
-#define OPEN_DOOR       PDR03_P6
+#define VOLTAGE                 0
+#define SPEED                   1
+#define STATE_DOOR              2
+#define STATE_FUEL              3
+#define RAB_TORMOZ              4
+#define GABARITY                5
+
+#define LOW_FUEL                PDR17_P0 
+#define BRAKE_ERROR             PDR03_P4
+#define OPEN_DOOR               PDR03_P6
+
+#define INPUT_RAB_TORMOZ        PDR04_P0
+#define INPUT_OPEN_DOOR         PDR04_P1
 
 #define MAX_SPEED 200
 #define SPEED_NO_CALC (MAX_SPEED + 50)
 
 static en_gui_mode_t    m_enGuiMode = StandardView;
 
-unsigned long value_fr_old = 0;                 // Переменная для хренения предыдущего значения счетчика частоты
 unsigned int TimerFr = 0;                       // Переменная таймера обнуленя частоты
 unsigned int TIME_OBNUL_FR = 0;                 // Расчетное время для обнуления
 
@@ -36,6 +43,17 @@ unsigned int time_test = 0;
 unsigned char flag_smcUpdate = 1;
 unsigned int timer_mode_empty = 0;
 unsigned char save_params_flag = 0;
+static unsigned char timeSetFulelLevel = 5;
+static unsigned char stateEngine = 0;
+
+unsigned char	*m_tr_data0;	/* master transmission data area */
+unsigned char	*m_re_data0;	/* master reception data area */
+unsigned int	m_tr_num0;		/* master transmission data counter */
+unsigned int	m_re_num0;		/* master reception data counter */
+unsigned char	*s_tr_data0;	/* slave transmission data area */
+unsigned char	*s_re_data0;	/* slave reception data area */
+unsigned int	s_tr_num0;		/* slave transmission data counter */
+unsigned int	s_re_num0;		/* slave reception data counter */
 
 static void DriverUpdate(void);
 static void Timer_1s(void);
@@ -59,18 +77,27 @@ void DriverInit(void)
 	DDR17_D0 = 1;	// SENS_P
 	DDR03_D4 = 1;	// BRAKE_ERROR
 	DDR03_D6 = 1;	// OPEN_DOOR
+	
+	DDR04_D0 = 0;	// INPUT_RAB_TORMOZ
+	PIER04_IE0 = 1;
+	DDR04_D1 = 0;	// INPUT_OPEN_DOOR
+	PIER04_IE1 = 1;
+	
 	TIME_OBNUL_FR = (36600/K)*10;  // Per = 3660*1000/K/10 
 	MAX_FREQUENSY = ((float)SPEED_NO_CALC/ 3660.0 * (float)K);
-	max_value = (16000000.0 / MAX_FREQUENSY);
+	max_value = 2*(16000000.0 / MAX_FREQUENSY);
+	timeSetFulelLevel = 5;
 	InitLCD();
-	ENABLE_POINT = 1;
-	ENABLE_KM = 1;
-	#if (I2C_ENABLE == 1)
-		init_setting_i2c();	// Инциализация интерфейса i2c
-	#endif
-	Timer_Start(TIMER_ID_MAIN, 20, TRUE, DriverUpdate);	
+	Timer_Start(TIMER_ID_MAIN, 20, TRUE, DriverUpdate);
 	Timer_Start(TIMER_1S, 1000, TRUE, Timer_1s);
 	Timer_Start(TIMER_60S, 60000, TRUE, Timer_60s);
+
+	#if (I2C_ENABLE == 1)
+		PIER04_IE5 = 1;
+		PIER04_IE4 = 1;	/* i2c 0 */
+		initial_set();
+		init_i2c_0_master();
+	#endif
 	if (adc_value[ADC_IGNITION] > 320)
 		StartTestMode();
 }
@@ -82,6 +109,8 @@ static void UdateLCD(void)
 		case StandardView:                           // Режим вывода пробега (общий, суточный)
 			//NumToTopStr((unsigned long)km/(K/10));
 			//NumToTopStr((unsigned long)adc_value[ADC_BACKLIGHT]);
+			ENABLE_POINT = 1;
+			ENABLE_KM = 1;
 			NumToTopStr((double)km*10/K);
 			NumToBottomStr((unsigned long)km_sut*100/K);			
 			break;
@@ -118,15 +147,19 @@ static void CalcSpeed(void)
 	}
 	
 	// Расчет частоты
-	frequency = 16000000.0/(float)value;
-	// Расчет скорости с заданным коэфф.
-	Speed = frequency*3660.0 / (float)K;
+	if (value != 0)
+	{
+		frequency = 16000000.0/((float)(value/2));
+		// Расчет скорости с заданным коэфф.
+		Speed = frequency*3660.0 / (float)K;
+	}
+	else
+		Speed = 0;
 }
 
 static void UpdateSMC(void)
 {
 	unsigned long temp_sms_inp = 0;
-
 	float r = 0.0;
 	float temp_float = 0.0;
 
@@ -135,22 +168,12 @@ static void UpdateSMC(void)
 	//Введение плюсовой погрешности
 	if (Speed == 0)
 		Speed = 0;
-	else if (Speed <= 60)
-		Speed += 1.6;
-	else if (Speed <= 80)
-		Speed += 2.0;
-	else if (Speed <= 100)
-		Speed += 2.4;
-	else if (Speed <= 120)
-		Speed += 2.8;
-	else if (Speed <= 140)
-		Speed += 3.2;
-	else if (Speed <= 160)
-		Speed += 3.6;
+	else if (Speed <= 20)
+		Speed += 3.0;
 	else if (Speed <= 180)
-		Speed += 4.0;
+		Speed += 1.8;
 	else
-		Speed += 4.4;
+		Speed += 3.0;
 		
 	temp_sms_inp = Speed * 614.4;   // 1 градус 512 шагов, 1км/ч = 240 / 200  = 1,2 гр; 1 км/ч = 1,2*512 = 614,4 шага; max = (205)*614.4 = 125952
 	if (temp_sms_inp > 125952)
@@ -185,30 +208,52 @@ static void UpdateSMC(void)
 		temp_float = 1.0;
 	else if (temp_float < 0)
 		temp_float = 0;
-		
-	if (temp_float < 0.125)
-		LOW_FUEL = 1;
-	else
-		LOW_FUEL = 0;
-		
+	
 	// 1 градус 512 шагов, 1гр = 90 / 1  = 90 гр; 1гр = 90*512 = 46080 шага; max = (1+0.1)*61440 = 50688
 	//SMCpos[FUEL_LEVEL].smc_inp = (long)(temp_float * 46080 + 5*512);
 	SMCpos[FUEL_LEVEL].smc_inp = (long)(temp_float * 48000 + 5*512);
+	
+	// Зажигание сигнализатора "низкий уровень топлва"
+	if (SMCpos[FUEL_LEVEL].smc_new < 8560)
+		LOW_FUEL = 1;
+	else
+		LOW_FUEL = 0;
 	/*Конец обрабoтки указателя уровня топлива */
 }
 
 static void DriverUpdate(void)
-{
+{	
+	m_tr_data0[VOLTAGE] = adc_value[ADC_IGNITION] >> 2;
+	m_tr_data0[SPEED] = (uint8_t)Speed;
+	
+	if (INPUT_RAB_TORMOZ == 0)
+		m_tr_data0[RAB_TORMOZ] = 1;
+	else
+		m_tr_data0[RAB_TORMOZ] = 0;
+		
+	if (INPUT_OPEN_DOOR == 0)
+		m_tr_data0[STATE_DOOR] = 1;
+	else
+		m_tr_data0[STATE_DOOR] = 0;
+	m_tr_data0[GABARITY] = adc_value[ADC_BACKLIGHT] >> 2;
+			
+	m_tr_data0[STATE_FUEL] = LOW_FUEL;
+	// Отправка данных на второй контроллер
+	#if (I2C_ENABLE == 1)
+		SendDataI2C();
+	#endif
+	
 	if (test_mode)
 	{
 		time_test--;
 		if (time_test)
-		{
+		{	
+			CalcSpeed();
 			//Проверяем наличие включенного зажигания и отсутствие скорости
 			if ((adc_value[ADC_IGNITION] > 320) && (Speed < 3.0))
 			{
 				//Если прошла половина времени теста возвращаем стрелки назад
-				if (time_test == 200)
+				if (time_test == 220)
 				{
 					SMCpos[SPEEDOMETR].smc_inp = 0;
 					SMCpos[FUEL_LEVEL].smc_inp = 0;
@@ -218,6 +263,7 @@ static void DriverUpdate(void)
 			{
 				StopTestMode();
 			}
+			
 		}
 		else
 		{
@@ -227,18 +273,19 @@ static void DriverUpdate(void)
 	}
 	//Установка значения подсветки
 	SetValueBacklight();
-	// Отправка данных на второй контроллер
-	#if (I2C_ENABLE == 1)
-		send_data_i2c(); // Инциализация интерфейса i2c
-	#endif
-	
+
 	//Проверка состояния зажигания
 	if 	(UpdateStateEngine())
 	{
 		// Обновление покзаний стрелочных приборов
 		UpdateSMC();
 		// Обновление показаний дисплея	
-		UdateLCD();	
+		UdateLCD();
+		stateEngine = 1;
+	}
+	else
+	{	
+		stateEngine = 0;
 	}
 	
 }
@@ -247,23 +294,25 @@ static void DriverUpdate(void)
 static unsigned int UpdateStateEngine(void)
 {
 	unsigned int result = 0;
-	if ((adc_value[ADC_IGNITION] > 320)  && (adc_value[ADC_IGNITION] < 745))
+	if ((adc_value[ADC_IGNITION] > 320)  && (adc_value[ADC_IGNITION] < 820))
 	{	
 		if ((m_enGuiMode == Empty) && (adc_value[ADC_IGNITION] > 340))
 		{
 			m_enGuiMode = StandardView;
+			SmcNormalParams();
 			// Включение сигнализаторов на 3 сек после включения зажигания
 			LOW_FUEL = 1;
 			BRAKE_ERROR = 1;
 			OPEN_DOOR = 1;
+			TimerFr  = TIME_OBNUL_FR + 1; ///!!!!!!!!!
 			Timer_Wait(TIMER_TIMEOUT, 2000, TRUE);
+			timeSetFulelLevel = 5;
 			LOW_FUEL = 0;
 			BRAKE_ERROR = 0;
 			OPEN_DOOR = 0;
 			//************************************************************
 			ENABLE_POINT = 1;
 			ENABLE_KM = 1;
-			SmcNormalParams();
 			timer_mode_empty = 0;
 		}
 		result = 1;
@@ -276,7 +325,7 @@ static unsigned int UpdateStateEngine(void)
 			SaveAllParams();	
 			save_params_flag = 0;
 		}
-		if (timer_mode_empty < 10)
+		if (timer_mode_empty < 5)
 			timer_mode_empty++;
 		else
 		{
@@ -302,19 +351,22 @@ static unsigned int UpdateStateEngine(void)
 static void StartTestMode(void)
 {
 	test_mode = 1;
-	time_test = 400; //20мс*400=8сек
+	time_test = 440; //20мс*400=8.8сек
 	LOW_FUEL = 1;
 	BRAKE_ERROR = 1;
 	OPEN_DOOR = 1;
+	Speed = 0;
 	NumToTopStr(888888);
 	NumToBottomStr(8888);
+	ENABLE_POINT = 1;
+	ENABLE_KM = 1;
 	SmcTestParams();
-	SMCpos[SPEEDOMETR].smc_inp = 122880;
-	SMCpos[FUEL_LEVEL].smc_inp = 46080;
+	SMCpos[SPEEDOMETR].smc_inp = 124000;
+	SMCpos[FUEL_LEVEL].smc_inp = 52000;
 }
 static void StopTestMode(void)
 {
-	test_mode = 1;
+	test_mode = 0;
 	time_test = 0;
 	LOW_FUEL = 0;
 	BRAKE_ERROR = 0;
@@ -322,12 +374,28 @@ static void StopTestMode(void)
 	ClearTopLine();
 	ClearBottomLine();
 	Disable_simbols();
+	SMCpos[SPEEDOMETR].smc_inp = 0;
+	SMCpos[FUEL_LEVEL].smc_inp = 0;
+	Timer_Wait(TIMER_TIMEOUT, 500, TRUE);
 	SmcNormalParams();
 }
 
 static void Timer_1s(void)
 {
-	
+	if (!test_mode && stateEngine)
+	{
+		// время на установку значения уровня топливав
+		// при включениизажигания
+		if (timeSetFulelLevel == 0)
+		{
+			if (Speed > 3.0)
+				SmcFuelDemp();
+			else
+				SmcNormalParams();
+		}
+		else
+			timeSetFulelLevel--;
+	}
 }
 
 static void Timer_60s(void)

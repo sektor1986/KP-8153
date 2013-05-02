@@ -163,6 +163,9 @@ void NumToTopStr(unsigned long num)
 {
 	unsigned long num_str = 0;
 	
+	while (num > 999999)
+		num -= 1000000;
+	
 	num_str = ToBCD(num);	
 			
 	segment5(num_str & 0xF);       // Вывод едениц     
@@ -195,7 +198,10 @@ void NumToTopStr(unsigned long num)
 void NumToBottomStr(unsigned long num)
 {
 	unsigned long num_str = 0;
-		
+	
+	while (num > 9999)
+		num -= 10000;
+	
 	num_str = ToBCD(num);	
 
 	segment1(num_str & 0xF);        // Выыод десятых долей

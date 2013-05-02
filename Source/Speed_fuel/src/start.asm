@@ -225,7 +225,7 @@
 #set      SUBOSC_CRYSTAL      2      ; Sub oscillator is enabled in "oscillation mode", connect crystal/resonator to X0A/X1A pins
 #set      SUBOSC_EXT_CLOCK    3      ; Sub oscillator is enabled in "external clock input mode", connect ext. clock to X0A pin, X1A can be used as GPIO
 
-#set      SUBOSC_MODE         SUBOSC_CRYSTAL   ; <<< select sub oscillator mode
+#set      SUBOSC_MODE         SUBOSC_DISABLED   ; <<< select sub oscillator mode
 
 ;====================================================================
 ; 4.7   Clock Stabilization Time

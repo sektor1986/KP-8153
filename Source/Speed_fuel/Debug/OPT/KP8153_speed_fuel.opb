@@ -23,4 +23,5 @@
 -a "E:\sektor\GIT_project\KP-8153\Source\Speed_fuel\Debug\OBJ\geometry.obj"
 -a "E:\sektor\GIT_project\KP-8153\Source\Speed_fuel\Debug\OBJ\i2c_master.obj"
 -a "E:\sektor\GIT_project\KP-8153\Source\Speed_fuel\Debug\OBJ\i2c_slave.obj"
+-a "E:\sektor\GIT_project\KP-8153\Source\Speed_fuel\Debug\OBJ\initial_set.obj"
 

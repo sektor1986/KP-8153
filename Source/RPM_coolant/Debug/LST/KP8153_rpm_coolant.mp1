@@ -1,4 +1,4 @@
-F2MC-16 Family SOFTUNE Linker Control List                                                      2013-02-19 11:01:06  Page:     1
+F2MC-16 Family SOFTUNE Linker Control List                                                      2013-04-26 09:48:46  Page:     1
 
 Option File(s)
   E:\sektor\GIT_project\KP-8153\Source\RPM_coolant\Debug\OPT\KP8153_rpm_coolant.opl
@@ -51,27 +51,38 @@ Input Module(s)
     18 E:\sektor\GIT_project\KP-8153\Source\RPM_coolant\Debug\OBJ\rtc.obj(rtc)
     19 E:\sektor\GIT_project\KP-8153\Source\RPM_coolant\Debug\OBJ\utils.obj(utils)
     20 E:\sektor\GIT_project\KP-8153\Source\RPM_coolant\Debug\OBJ\sound.obj(sound)
-    21 C:\Program Files\Softune16\LIB\907\lib904m.lib(__STD_LIB_divul)
-    22 C:\Program Files\Softune16\LIB\907\lib904m.lib(__STD_LIB_fadtof)
-    23 C:\Program Files\Softune16\LIB\907\lib904m.lib(__STD_LIB_fadto_)
-    24 C:\Program Files\Softune16\LIB\907\lib904m.lib(__STD_LIB_fafaddl)
-    25 C:\Program Files\Softune16\LIB\907\lib904m.lib(__STD_LIB_fafmull)
-    26 C:\Program Files\Softune16\LIB\907\lib904m.lib(__STD_LIB_faftestl)
-    27 C:\Program Files\Softune16\LIB\907\lib904m.lib(__STD_LIB_faftod)
-F2MC-16 Family SOFTUNE Linker Control List                                                      2013-02-19 11:01:06  Page:     2
+    21 E:\sektor\GIT_project\KP-8153\Source\RPM_coolant\Debug\OBJ\geometry.obj(geometry)
+    22 E:\sektor\GIT_project\KP-8153\Source\RPM_coolant\Debug\OBJ\initial_set.obj(initial_set)
+    23 C:\Program Files\Softune16\LIB\907\lib904m.lib(__STD_LIB_divul)
+    24 C:\Program Files\Softune16\LIB\907\lib904m.lib(__STD_LIB_fadtof)
+    25 C:\Program Files\Softune16\LIB\907\lib904m.lib(__STD_LIB_fadto_)
+    26 C:\Program Files\Softune16\LIB\907\lib904m.lib(__STD_LIB_fafadd)
+    27 C:\Program Files\Softune16\LIB\907\lib904m.lib(__STD_LIB_fafaddl)
+F2MC-16 Family SOFTUNE Linker Control List                                                      2013-04-26 09:48:46  Page:     2
 
-    28 C:\Program Files\Softune16\LIB\907\lib904m.lib(__STD_LIB_mull)
-    29 C:\Program Files\Softune16\LIB\907\lib904m.lib(__STD_LIB_mulul)
-    30 C:\Program Files\Softune16\LIB\907\lib904m.lib(__STD_LIB_fa_itod)
-    31 C:\Program Files\Softune16\LIB\907\lib904m.lib(__STD_LIB_fashl)
-    32 C:\Program Files\Softune16\LIB\907\lib904m.lib(__STD_LIB_fashr)
-    33 C:\Program Files\Softune16\LIB\907\lib904m.lib(__STD_LIB_abs)
+    28 C:\Program Files\Softune16\LIB\907\lib904m.lib(__STD_LIB_fafcmp)
+    29 C:\Program Files\Softune16\LIB\907\lib904m.lib(__STD_LIB_fafcmpl)
+    30 C:\Program Files\Softune16\LIB\907\lib904m.lib(__STD_LIB_fafdiv)
+    31 C:\Program Files\Softune16\LIB\907\lib904m.lib(__STD_LIB_fafdivl)
+    32 C:\Program Files\Softune16\LIB\907\lib904m.lib(__STD_LIB_fafmul)
+    33 C:\Program Files\Softune16\LIB\907\lib904m.lib(__STD_LIB_fafmull)
     34 C:\Program Files\Softune16\LIB\907\lib904m.lib(__STD_LIB_faftest)
+    35 C:\Program Files\Softune16\LIB\907\lib904m.lib(__STD_LIB_faftestl)
+    36 C:\Program Files\Softune16\LIB\907\lib904m.lib(__STD_LIB_faftod)
+    37 C:\Program Files\Softune16\LIB\907\lib904m.lib(__STD_LIB_fafto_)
+    38 C:\Program Files\Softune16\LIB\907\lib904m.lib(__STD_LIB_fa_itod)
+    39 C:\Program Files\Softune16\LIB\907\lib904m.lib(__STD_LIB_mull)
+    40 C:\Program Files\Softune16\LIB\907\lib904m.lib(__STD_LIB_mulul)
+    41 C:\Program Files\Softune16\LIB\907\lib904m.lib(__STD_LIB_fa_itof)
+    42 C:\Program Files\Softune16\LIB\907\lib904m.lib(__STD_LIB_fa_ltof)
+    43 C:\Program Files\Softune16\LIB\907\lib904m.lib(__STD_LIB_fashl)
+    44 C:\Program Files\Softune16\LIB\907\lib904m.lib(__STD_LIB_fashr)
+    45 C:\Program Files\Softune16\LIB\907\lib904m.lib(__STD_LIB_abs)
 
 Error(s)
      ** Nothing **
 
-F2MC-16 Family SOFTUNE Linker Mapping List                                                      2013-02-19 11:01:06  Page:     3
+F2MC-16 Family SOFTUNE Linker Mapping List                                                      2013-04-26 09:48:46  Page:     3
 
 S_Addr. -E_Addr.   Size      Section Type Al     Sec.(Top 81)                                                                      C
 00000000-00000000  00000001  IO    N RW-- 00 ABS  IO_PDR00
@@ -131,7 +142,7 @@ S_Addr. -E_Addr.   Size      Section Type Al     Sec.(Top 81)                   
 00000096-00000097  00000002  IO    N RW-- 00 ABS  IO_PCN3
 000000AC-000000B5  0000000A  IO    N RW-- 00 ABS  IO_IIC0
 000000C0-000000C9  0000000A  IO    N RW-- 00 ABS  IO_UART0
-F2MC-16 Family SOFTUNE Linker Mapping List                                                      2013-02-19 11:01:06  Page:     4
+F2MC-16 Family SOFTUNE Linker Mapping List                                                      2013-04-26 09:48:46  Page:     4
 
 S_Addr. -E_Addr.   Size      Section Type Al     Sec.(Top 81)                                                                      C
 000000CA-000000D3  0000000A  IO    N RW-- 00 ABS  IO_UART1
@@ -191,7 +202,7 @@ S_Addr. -E_Addr.   Size      Section Type Al     Sec.(Top 81)                   
 00000433-00000433  00000001  DATA  N RW-- 00 ABS  IO_DDR03
 00000434-00000434  00000001  DATA  N RW-- 00 ABS  IO_DDR04
 00000435-00000435  00000001  DATA  N RW-- 00 ABS  IO_DDR05
-F2MC-16 Family SOFTUNE Linker Mapping List                                                      2013-02-19 11:01:06  Page:     5
+F2MC-16 Family SOFTUNE Linker Mapping List                                                      2013-04-26 09:48:46  Page:     5
 
 S_Addr. -E_Addr.   Size      Section Type Al     Sec.(Top 81)                                                                      C
 00000436-00000436  00000001  DATA  N RW-- 00 ABS  IO_DDR06
@@ -251,7 +262,7 @@ S_Addr. -E_Addr.   Size      Section Type Al     Sec.(Top 81)                   
 000004F0-000004F1  00000002  DATA  N RW-- 00 ABS  IO_CUTR1
 000004FA-000004FA  00000001  DATA  N RW-- 00 ABS  IO_TMISR
 000005E0-000005E7  00000008  DATA  N RW-- 00 ABS  IO_PWC0
-F2MC-16 Family SOFTUNE Linker Mapping List                                                      2013-02-19 11:01:06  Page:     6
+F2MC-16 Family SOFTUNE Linker Mapping List                                                      2013-04-26 09:48:46  Page:     6
 
 S_Addr. -E_Addr.   Size      Section Type Al     Sec.(Top 81)                                                                      C
 000005EA-000005F1  00000008  DATA  N RW-- 00 ABS  IO_PWC1
@@ -306,17 +317,17 @@ S_Addr. -E_Addr.   Size      Section Type Al     Sec.(Top 81)                   
 00000BF0-00000BF1  00000002  DATA  N RW-- 00 ABS  IO_DSUCR
 00000BF4-00000BF5  00000002  DATA  N RW-- 00 ABS  IO_UER
 00000BF6-00000BF7  00000002  DATA  N RW-- 00 ABS  IO_MBR
-00007200-00007725  00000526  DATA  P RW-- 02 REL  DATA
+00007200-00007ADB  000008DC  DATA  P RW-- 02 REL  DATA
 00007200-........  00000000  DIR   P RW-- 02 REL  DIRDATA
 00007200-........  00000000  DIR   P RW-- 02 REL  DIRINIT
-00007726-........  00000000  DATA  P RW-- 02 REL  LIBDATA
-00007726-000077BF  0000009A  DATA  P RW-- 02 REL  INIT
-F2MC-16 Family SOFTUNE Linker Mapping List                                                      2013-02-19 11:01:06  Page:     7
+00007ADC-........  00000000  DATA  P RW-- 02 REL  LIBDATA
+00007ADC-00007C24  00000149  DATA  P RW-- 02 REL  INIT
+F2MC-16 Family SOFTUNE Linker Mapping List                                                      2013-04-26 09:48:46  Page:     7
 
 S_Addr. -E_Addr.   Size      Section Type Al     Sec.(Top 81)                                                                      C
-000077C0-........  00000000  DATA  P RW-- 02 REL  LIBINIT
-000077C0-00007ABF  00000300  STACK P RW-- 02 REL  SSTACK
-00007AC0-00007AC1  00000002  STACK P RW-- 02 REL  USTACK
+00007C26-........  00000000  DATA  P RW-- 02 REL  LIBINIT
+00007C26-00007F25  00000300  STACK P RW-- 02 REL  SSTACK
+00007F26-00007F27  00000002  STACK P RW-- 02 REL  USTACK
 000E9302-000E9303  00000002  DATA  N RW-- 00 ABS  IO_GCN40
 000E9304-000E9304  00000001  DATA  N RW-- 00 ABS  IO_GCN5L0
 000E9310-000E9310  00000001  DATA  N RW-- 00 ABS  IO_EPCN2L0
@@ -371,7 +382,7 @@ S_Addr. -E_Addr.   Size      Section Type Al     Sec.(Top 81)                   
 000E95BD-000E95BD  00000001  DATA  N RW-- 00 ABS  IO_ADPCTNRD220
 000E95BE-000E95BE  00000001  DATA  N RW-- 00 ABS  IO_ADPCTPRD230
 000E95BF-000E95BF  00000001  DATA  N RW-- 00 ABS  IO_ADPCTNRD230
-F2MC-16 Family SOFTUNE Linker Mapping List                                                      2013-02-19 11:01:06  Page:     8
+F2MC-16 Family SOFTUNE Linker Mapping List                                                      2013-04-26 09:48:46  Page:     8
 
 S_Addr. -E_Addr.   Size      Section Type Al     Sec.(Top 81)                                                                      C
 000E95E0-000E95E0  00000001  DATA  N RW-- 00 ABS  IO_ADPCTPCT80
@@ -418,78 +429,102 @@ S_Addr. -E_Addr.   Size      Section Type Al     Sec.(Top 81)                   
 00DF0058-00DF0075  0000001E  CONST N R--I 00 ABS  OCDS_SECURITY
 00DF0076-00DF00FF  0000008A  CONST N R--I 00 ABS  OCDS_PINMODE_SELECT
 00FF0000-00FF00AF  000000B0  CODE  P R-XI 01 REL  CODE_START
-00FF00B0-00FF01F4  00000145  CODE  P R-XI 01 REL  CODE_main
-00FF01F5-00FF024B  00000057  CODE  P R-XI 01 REL  CODE_vectors
-00FF024C-00FF02B4  00000069  CODE  P R-XI 01 REL  CODE_adc
-00FF02B5-00FF048C  000001D8  CODE  P R-XI 01 REL  CODE_button
-00FF048D-00FF0574  000000E8  CODE  P R-XI 01 REL  CODE_flash
-00FF0575-00FF0637  000000C3  CODE  P R-XI 01 REL  CODE_icu
-00FF0638-00FF0B8A  00000553  CODE  P R-XI 01 REL  CODE_smc
-00FF0B8B-00FF18C0  00000D36  CODE  P R-XI 01 REL  CODE_mb96670_smc_zpd
-00FF18C1-00FF1E91  000005D1  CODE  P R-XI 01 REL  CODE_driver_update
-00FF1E92-00FF20AB  0000021A  CODE  P R-XI 01 REL  CODE_timer
-00FF20AC-00FF24E4  00000439  CODE  P R-XI 01 REL  CODE_can
-00FF24E5-00FF2640  0000015C  CODE  P R-XI 01 REL  CODE_j1939
-00FF2641-00FF2776  00000136  CODE  P R-XI 01 REL  CODE_i2c_master
-F2MC-16 Family SOFTUNE Linker Mapping List                                                      2013-02-19 11:01:06  Page:     9
+00FF00B0-00FF0210  00000161  CODE  P R-XI 01 REL  CODE_main
+00FF0211-00FF026D  0000005D  CODE  P R-XI 01 REL  CODE_vectors
+00FF026E-00FF02D6  00000069  CODE  P R-XI 01 REL  CODE_adc
+00FF02D7-00FF04BA  000001E4  CODE  P R-XI 01 REL  CODE_button
+00FF04BB-00FF05A2  000000E8  CODE  P R-XI 01 REL  CODE_flash
+00FF05A3-00FF06D2  00000130  CODE  P R-XI 01 REL  CODE_icu
+00FF06D3-00FF0C28  00000556  CODE  P R-XI 01 REL  CODE_smc
+00FF0C29-00FF195E  00000D36  CODE  P R-XI 01 REL  CODE_mb96670_smc_zpd
+00FF195F-00FF2983  00001025  CODE  P R-XI 01 REL  CODE_driver_update
+00FF2984-00FF2B9D  0000021A  CODE  P R-XI 01 REL  CODE_timer
+00FF2B9E-00FF2FD6  00000439  CODE  P R-XI 01 REL  CODE_can
+00FF2FD7-00FF3132  0000015C  CODE  P R-XI 01 REL  CODE_j1939
+00FF3133-00FF31F7  000000C5  CODE  P R-XI 01 REL  CODE_i2c_master
+F2MC-16 Family SOFTUNE Linker Mapping List                                                      2013-04-26 09:48:46  Page:     9
 
 S_Addr. -E_Addr.   Size      Section Type Al     Sec.(Top 81)                                                                      C
-00FF2777-00FF2815  0000009F  CODE  P R-XI 01 REL  CODE_i2c_slave
-00FF2816-00FF2B25  00000310  CODE  P R-XI 01 REL  CODE_lcd
-00FF2B26-00FF2B6E  00000049  CODE  P R-XI 01 REL  CODE_rtc
-00FF2B6F-00FF2CC6  00000158  CODE  P R-XI 01 REL  CODE_utils
-00FF2CC7-00FF2D00  0000003A  CODE  P R-XI 01 REL  CODE_sound
-00FF2D01-00FF3484  00000784  CODE  P R-XI 01 REL  LIBCODE
-00FF3486-00FF351F  0000009A  CONST P R--I 02 REL  DCONST
-00FF3520-........  00000000  CONST P R--I 02 REL  LIBDCONST
-00FF3520-00FF3531  00000012  CONST P R--I 02 REL  DCLEAR
-00FF3532-00FF354F  0000001E  CONST P R--I 02 REL  DTRANS
-00FF3550-........  00000000  DIRC  P R--I 02 REL  DIRCONST
+00FF31F8-00FF3281  0000008A  CODE  P R-XI 01 REL  CODE_i2c_slave
+00FF3282-00FF35EA  00000369  CODE  P R-XI 01 REL  CODE_lcd
+00FF35EB-00FF3633  00000049  CODE  P R-XI 01 REL  CODE_rtc
+00FF3634-00FF378B  00000158  CODE  P R-XI 01 REL  CODE_utils
+00FF378C-00FF3B08  0000037D  CODE  P R-XI 01 REL  CODE_sound
+00FF3B09-00FF3B77  0000006F  CODE  P R-XI 01 REL  CODE_geometry
+00FF3B78-00FF3BD8  00000061  CODE  P R-XI 01 REL  CODE_initial_set
+00FF3BD9-00FF4BA3  00000FCB  CODE  P R-XI 01 REL  LIBCODE
+00FF4BA4-00FF4CEC  00000149  CONST P R--I 02 REL  DCONST
+00FF4CEE-........  00000000  CONST P R--I 02 REL  LIBDCONST
+00FF4CEE-00FF4CFF  00000012  CONST P R--I 02 REL  DCLEAR
+00FF4D00-00FF4D1D  0000001E  CONST P R--I 02 REL  DTRANS
+00FF4D1E-........  00000000  DIRC  P R--I 02 REL  DIRCONST
 00FF8000-00FF80DF  000000E0  CONST P R--I 02 REL  CONST
 00FFFDB0-00FFFFD3  00000224  CONST N R--I 00 ABS  INTVECT
 00FFFFDC-00FFFFDE  00000003  CONST N R--I 00 ABS  RESVECT
-F2MC-16 Family SOFTUNE Linker Symbol List                                                       2013-02-19 11:01:06  Page:    10
+F2MC-16 Family SOFTUNE Linker Symbol List                                                       2013-04-26 09:48:46  Page:    10
 
 Symbol Value        Type   Def.  Symbol Name (Top 97)                                                                              C
- 00FF2D01(ABS)      Addr.  LIB    DIVUL
- 00FF2D54(ABS)      Addr.  LIB    DTOF
- 00FF2DE6(ABS)      Addr.  LIB   @DTOI
- 00FF2DE6(ABS)      Addr.  LIB    DTOL
- 00FF2DE6(ABS)      Addr.  LIB   @DTOUI
- 00FF2DE6(ABS)      Addr.  LIB    DTOUL
- 00FF2E5D(ABS)      Addr.  LIB    FADDL
- 00FF3088(ABS)      Addr.  LIB    FMULL
- 00FF347D(ABS)      Addr.  LIB    FTEST
- 00FF32C0(ABS)      Addr.  LIB    FTESTL
- 00FF32DC(ABS)      Addr.  LIB    FTOD
- 00FF3390(ABS)      Addr.  LIB   @ITOD
- 00FF3339(ABS)      Addr.  LIB    MULL
- 00FF3376(ABS)      Addr.  LIB    MULUL
- 00FF338D(ABS)      Addr.  LIB    UITOD
- 00FF0286(ABS)      Addr.  OM/LM  _ADC_IRQ
- 00FF17DB(ABS)      Addr.  OM/LM @_ADC_zpd
- 00FF2CE6(ABS)      Addr.  OM/LM @_Beep
- 00FF1ACB(ABS)      Addr.  OM/LM  _ButtonCallback
- 00FF031F(ABS)      Addr.  OM/LM @_Button_GetCurrentButtonState
- 00FF02B5(ABS)      Addr.  OM/LM  _Button_Init
- 00FF22BD(ABS)      Addr.  OM/LM @_CAN_GetErrorState
- 00FF20AC(ABS)      Addr.  OM/LM  _CAN_Init
- 00FF2237(ABS)      Addr.  OM/LM  _CAN_SetupReceiver
- 00FF2103(ABS)      Addr.  OM/LM @_CAN_SetupTransmitter
- 00FF2161(ABS)      Addr.  OM/LM @_CAN_UpdateTransmitter
- 00FF06EA(ABS)      Addr.  OM/LM  _ClearPosSMC
- 00FF2AEE(ABS)      Addr.  OM/LM  _ClearTopLine
- 00FF048D(ABS)      Addr.  OM/LM  _Data_Flash_write
- 00FF04CA(ABS)      Addr.  OM/LM  _Data_flash_SectorErase
- 00FF2B0E(ABS)      Addr.  OM/LM  _Disable_simbols
- 00FF18C1(ABS)      Addr.  OM/LM  _DriverInit
- 00FF0597(ABS)      Addr.  OM/LM  _FRT0_IRQ
- 000074DC(ABS)      Addr.  OM/LM @_FRT0_ovl_cnt
- 000074DA(ABS)      Addr.  OM/LM @_FRT0_ovl_cnt_new
- 000074D8(ABS)      Addr.  OM/LM @_FRT0_ovl_cnt_old
- 00FF05A2(ABS)      Addr.  OM/LM  _ICU1_IRQ
- 000074DE(ABS)      Addr.  OM/LM @_ICU1_new
- 000074E0(ABS)      Addr.  OM/LM @_ICU1_old
+ 00FF3BD9(ABS)      Addr.  LIB    DIVUL
+ 00FF3C2C(ABS)      Addr.  LIB    DTOF
+ 00FF3CBE(ABS)      Addr.  LIB   @DTOI
+ 00FF3CBE(ABS)      Addr.  LIB    DTOL
+ 00FF3CBE(ABS)      Addr.  LIB   @DTOUI
+ 00FF3CBE(ABS)      Addr.  LIB    DTOUL
+ 00FF3D35(ABS)      Addr.  LIB    FADD
+ 00FF3E70(ABS)      Addr.  LIB    FADDL
+ 00FF409B(ABS)      Addr.  LIB    FCMP
+ 00FF40CA(ABS)      Addr.  LIB    FCMPL
+ 00FF4118(ABS)      Addr.  LIB    FDIV
+ 00FF42A6(ABS)      Addr.  LIB    FDIVL
+ 00FF45F1(ABS)      Addr.  LIB    FMUL
+ 00FF46E2(ABS)      Addr.  LIB    FMULL
+ 00FF491A(ABS)      Addr.  LIB    FTEST
+ 00FF4922(ABS)      Addr.  LIB    FTESTL
+ 00FF493E(ABS)      Addr.  LIB    FTOD
+ 00FF499B(ABS)      Addr.  LIB   @FTOI
+ 00FF499B(ABS)      Addr.  LIB    FTOL
+ 00FF499B(ABS)      Addr.  LIB    FTOUI
+ 00FF499B(ABS)      Addr.  LIB   @FTOUL
+ 00FF49E1(ABS)      Addr.  LIB    ITOD
+ 00FF4A7E(ABS)      Addr.  LIB   @ITOF
+ 00FF4AB8(ABS)      Addr.  LIB   @LTOF
+ 00FF4A27(ABS)      Addr.  LIB    MULL
+ 00FF4A64(ABS)      Addr.  LIB    MULUL
+ 00FF49DE(ABS)      Addr.  LIB    UITOD
+ 00FF4A7B(ABS)      Addr.  LIB    UITOF
+ 00FF4AB1(ABS)      Addr.  LIB    ULTOF
+ 00FF02A8(ABS)      Addr.  OM/LM  _ADC_IRQ
+ 00FF1879(ABS)      Addr.  OM/LM @_ADC_zpd
+ 00FF37BA(ABS)      Addr.  OM/LM  _ActivateSound
+ 00FF37AB(ABS)      Addr.  OM/LM @_Beep
+ 00FF219C(ABS)      Addr.  OM/LM  _ButtonCallback
+ 00FF0341(ABS)      Addr.  OM/LM @_Button_GetCurrentButtonState
+ 00FF02D7(ABS)      Addr.  OM/LM  _Button_Init
+ 00FF2DAF(ABS)      Addr.  OM/LM @_CAN_GetErrorState
+ 00FF2B9E(ABS)      Addr.  OM/LM  _CAN_Init
+ 00FF2D29(ABS)      Addr.  OM/LM  _CAN_SetupReceiver
+ 00FF2BF5(ABS)      Addr.  OM/LM @_CAN_SetupTransmitter
+ 00FF2C53(ABS)      Addr.  OM/LM @_CAN_UpdateTransmitter
+ 00FF0785(ABS)      Addr.  OM/LM  _ClearPosSMC
+ 00FF359B(ABS)      Addr.  OM/LM  _ClearTopLine
+ 00FF04BB(ABS)      Addr.  OM/LM  _Data_Flash_write
+ 00FF04F8(ABS)      Addr.  OM/LM  _Data_flash_SectorErase
+ 00FF3824(ABS)      Addr.  OM/LM  _DeactivateAllSound
+ 00FF37E9(ABS)      Addr.  OM/LM  _DeactivateSound
+ 00FF35D3(ABS)      Addr.  OM/LM  _Disable_simbols
+ 00FF195F(ABS)      Addr.  OM/LM  _DriverInit
+ 00FF0668(ABS)      Addr.  OM/LM  _EI0_IRQ
+ 00FF35BB(ABS)      Addr.  OM/LM  _Enable_simbols
+ 00FF05D9(ABS)      Addr.  OM/LM  _FRT0_IRQ
+ 000074D8(ABS)      Addr.  OM/LM @_FRT0_ovl_cnt
+ 000074D6(ABS)      Addr.  OM/LM @_FRT0_ovl_cnt_new
+ 000074D4(ABS)      Addr.  OM/LM @_FRT0_ovl_cnt_old
+ 00FF05E4(ABS)      Addr.  OM/LM  _ICU1_IRQ
+ 000074DA(ABS)      Addr.  OM/LM @_ICU1_new
+F2MC-16 Family SOFTUNE Linker Symbol List                                                       2013-04-26 09:48:46  Page:    11
+
+Symbol Value        Type   Def.  Symbol Name (Top 97)                                                                              C
+ 000074DC(ABS)      Addr.  OM/LM @_ICU1_old
  000E9554(ABS)      Addr.  OM/LM @_IO_ADCC040
  000E9556(ABS)      Addr.  OM/LM @_IO_ADCC060
  000E9558(ABS)      Addr.  OM/LM @_IO_ADCC080
@@ -508,9 +543,6 @@ Symbol Value        Type   Def.  Symbol Name (Top 97)                           
  000E95E9(ABS)      Addr.  OM/LM @_IO_ADPCTNCT120
  000E95EB(ABS)      Addr.  OM/LM @_IO_ADPCTNCT130
  000E95F1(ABS)      Addr.  OM/LM @_IO_ADPCTNCT160
-F2MC-16 Family SOFTUNE Linker Symbol List                                                       2013-02-19 11:01:06  Page:    11
-
-Symbol Value        Type   Def.  Symbol Name (Top 97)                                                                              C
  000E95F3(ABS)      Addr.  OM/LM @_IO_ADPCTNCT170
  000E95F5(ABS)      Addr.  OM/LM @_IO_ADPCTNCT180
  000E95F7(ABS)      Addr.  OM/LM @_IO_ADPCTNCT190
@@ -549,6 +581,9 @@ Symbol Value        Type   Def.  Symbol Name (Top 97)                           
  000E95B0(ABS)      Addr.  OM/LM @_IO_ADPCTPRD160
  000E95B2(ABS)      Addr.  OM/LM @_IO_ADPCTPRD170
  000E95B4(ABS)      Addr.  OM/LM @_IO_ADPCTPRD180
+F2MC-16 Family SOFTUNE Linker Symbol List                                                       2013-04-26 09:48:46  Page:    12
+
+Symbol Value        Type   Def.  Symbol Name (Top 97)                                                                              C
  000E95B6(ABS)      Addr.  OM/LM @_IO_ADPCTPRD190
  000E95B8(ABS)      Addr.  OM/LM @_IO_ADPCTPRD200
  000E95BA(ABS)      Addr.  OM/LM @_IO_ADPCTPRD210
@@ -568,9 +603,6 @@ Symbol Value        Type   Def.  Symbol Name (Top 97)                           
  000E9542(ABS)      Addr.  OM/LM @_IO_ADRCOIRS20
  000E9520(ABS)      Addr.  OM/LM @_IO_ADRCOL00
  000E9524(ABS)      Addr.  OM/LM @_IO_ADRCOL10
-F2MC-16 Family SOFTUNE Linker Symbol List                                                       2013-02-19 11:01:06  Page:    12
-
-Symbol Value        Type   Def.  Symbol Name (Top 97)                                                                              C
  000E9528(ABS)      Addr.  OM/LM @_IO_ADRCOL20
  000E952C(ABS)      Addr.  OM/LM @_IO_ADRCOL30
  00000B55(ABS)      Addr.  OM/LM @_IO_ADRCOOF10
@@ -608,10 +640,13 @@ Symbol Value        Type   Def.  Symbol Name (Top 97)                           
  00000435(ABS)      Addr.  OM/LM @_IO_DDR05
  00000436(ABS)      Addr.  OM/LM  _IO_DDR06
  00000438(ABS)      Addr.  OM/LM  _IO_DDR08
- 0000043B(ABS)      Addr.  OM/LM @_IO_DDR11
+ 0000043B(ABS)      Addr.  OM/LM  _IO_DDR11
+F2MC-16 Family SOFTUNE Linker Symbol List                                                       2013-04-26 09:48:46  Page:    13
+
+Symbol Value        Type   Def.  Symbol Name (Top 97)                                                                              C
  0000043C(ABS)      Addr.  OM/LM  _IO_DDR12
  0000043D(ABS)      Addr.  OM/LM @_IO_DDR13
- 00000441(ABS)      Addr.  OM/LM @_IO_DDR17
+ 00000441(ABS)      Addr.  OM/LM  _IO_DDR17
  00000394(ABS)      Addr.  OM/LM @_IO_DER
  000003E8(ABS)      Addr.  OM/LM  _IO_DFCA
  000003E9(ABS)      Addr.  OM/LM @_IO_DFICA
@@ -628,15 +663,12 @@ Symbol Value        Type   Def.  Symbol Name (Top 97)                           
  00000392(ABS)      Addr.  OM/LM @_IO_DSSR
  00000BF0(ABS)      Addr.  OM/LM @_IO_DSUCR
  000E97C0(ABS)      Addr.  OM/LM @_IO_EFER0
-F2MC-16 Family SOFTUNE Linker Symbol List                                                       2013-02-19 11:01:06  Page:    13
-
-Symbol Value        Type   Def.  Symbol Name (Top 97)                                                                              C
  000E97D0(ABS)      Addr.  OM/LM @_IO_EFER1
  000E97C8(ABS)      Addr.  OM/LM @_IO_EIER0
  000E97D8(ABS)      Addr.  OM/LM @_IO_EIER1
- 00000059(ABS)      Addr.  OM/LM @_IO_EIRR0
- 0000005A(ABS)      Addr.  OM/LM @_IO_ELVR0
- 00000058(ABS)      Addr.  OM/LM @_IO_ENIR0
+ 00000059(ABS)      Addr.  OM/LM  _IO_EIRR0
+ 0000005A(ABS)      Addr.  OM/LM  _IO_ELVR0
+ 00000058(ABS)      Addr.  OM/LM  _IO_ENIR0
  00000A80(ABS)      Addr.  OM/LM @_IO_EPCN10
  00000A82(ABS)      Addr.  OM/LM @_IO_EPCN11
  00000A84(ABS)      Addr.  OM/LM @_IO_EPCN12
@@ -669,6 +701,9 @@ Symbol Value        Type   Def.  Symbol Name (Top 97)                           
  0000004D(ABS)      Addr.  OM/LM @_IO_ICE45
  000003A0(ABS)      Addr.  OM/LM  _IO_ICR
  00000040(ABS)      Addr.  OM/LM  _IO_ICS01
+F2MC-16 Family SOFTUNE Linker Symbol List                                                       2013-04-26 09:48:46  Page:    14
+
+Symbol Value        Type   Def.  Symbol Name (Top 97)                                                                              C
  0000004C(ABS)      Addr.  OM/LM @_IO_ICS45
  000000AC(ABS)      Addr.  OM/LM  _IO_IIC0
  00000104(ABS)      Addr.  OM/LM @_IO_IOA0
@@ -688,9 +723,6 @@ Symbol Value        Type   Def.  Symbol Name (Top 97)                           
  00000621(ABS)      Addr.  OM/LM @_IO_LCDER5
  00000622(ABS)      Addr.  OM/LM @_IO_LCDER6
  00000623(ABS)      Addr.  OM/LM @_IO_LCDER7
-F2MC-16 Family SOFTUNE Linker Symbol List                                                       2013-02-19 11:01:06  Page:    14
-
-Symbol Value        Type   Def.  Symbol Name (Top 97)                                                                              C
  00000626(ABS)      Addr.  OM/LM  _IO_LCDVER
  00000629(ABS)      Addr.  OM/LM  _IO_LCR
  00000627(ABS)      Addr.  OM/LM  _IO_LECR
@@ -707,17 +739,17 @@ Symbol Value        Type   Def.  Symbol Name (Top 97)                           
  00000092(ABS)      Addr.  OM/LM @_IO_PCSR3
  000E9898(ABS)      Addr.  OM/LM @_IO_PDCR08
  00000000(ABS)      Addr.  OM/LM @_IO_PDR00
- 00000001(ABS)      Addr.  OM/LM @_IO_PDR01
- 00000002(ABS)      Addr.  OM/LM @_IO_PDR02
- 00000003(ABS)      Addr.  OM/LM @_IO_PDR03
- 00000004(ABS)      Addr.  OM/LM @_IO_PDR04
+ 00000001(ABS)      Addr.  OM/LM  _IO_PDR01
+ 00000002(ABS)      Addr.  OM/LM  _IO_PDR02
+ 00000003(ABS)      Addr.  OM/LM  _IO_PDR03
+ 00000004(ABS)      Addr.  OM/LM  _IO_PDR04
  00000005(ABS)      Addr.  OM/LM @_IO_PDR05
- 00000006(ABS)      Addr.  OM/LM @_IO_PDR06
+ 00000006(ABS)      Addr.  OM/LM  _IO_PDR06
  00000008(ABS)      Addr.  OM/LM  _IO_PDR08
- 0000000B(ABS)      Addr.  OM/LM @_IO_PDR11
+ 0000000B(ABS)      Addr.  OM/LM  _IO_PDR11
  0000000C(ABS)      Addr.  OM/LM  _IO_PDR12
  0000000D(ABS)      Addr.  OM/LM @_IO_PDR13
- 00000011(ABS)      Addr.  OM/LM @_IO_PDR17
+ 00000011(ABS)      Addr.  OM/LM  _IO_PDR17
  0000007C(ABS)      Addr.  OM/LM @_IO_PDUT0
  00000084(ABS)      Addr.  OM/LM @_IO_PDUT1
  0000008C(ABS)      Addr.  OM/LM @_IO_PDUT2
@@ -727,14 +759,17 @@ Symbol Value        Type   Def.  Symbol Name (Top 97)                           
  00000445(ABS)      Addr.  OM/LM @_IO_PIER01
  00000446(ABS)      Addr.  OM/LM @_IO_PIER02
  00000447(ABS)      Addr.  OM/LM  _IO_PIER03
- 00000448(ABS)      Addr.  OM/LM @_IO_PIER04
+ 00000448(ABS)      Addr.  OM/LM  _IO_PIER04
  00000449(ABS)      Addr.  OM/LM @_IO_PIER05
+F2MC-16 Family SOFTUNE Linker Symbol List                                                       2013-04-26 09:48:46  Page:    15
+
+Symbol Value        Type   Def.  Symbol Name (Top 97)                                                                              C
  0000044A(ABS)      Addr.  OM/LM  _IO_PIER06
  0000044C(ABS)      Addr.  OM/LM @_IO_PIER08
- 0000044F(ABS)      Addr.  OM/LM @_IO_PIER11
+ 0000044F(ABS)      Addr.  OM/LM  _IO_PIER11
  00000450(ABS)      Addr.  OM/LM @_IO_PIER12
  00000451(ABS)      Addr.  OM/LM @_IO_PIER13
- 00000455(ABS)      Addr.  OM/LM @_IO_PIER17
+ 00000455(ABS)      Addr.  OM/LM  _IO_PIER17
  00000406(ABS)      Addr.  OM/LM @_IO_PLLCR
  000004D6(ABS)      Addr.  OM/LM @_IO_PRRR0
  00000663(ABS)      Addr.  OM/LM @_IO_PRRR13
@@ -748,9 +783,6 @@ Symbol Value        Type   Def.  Symbol Name (Top 97)                           
  00000090(ABS)      Addr.  OM/LM @_IO_PTMR3
  000E9314(ABS)      Addr.  OM/LM @_IO_PTPC0
  000E9324(ABS)      Addr.  OM/LM @_IO_PTPC1
-F2MC-16 Family SOFTUNE Linker Symbol List                                                       2013-02-19 11:01:06  Page:    15
-
-Symbol Value        Type   Def.  Symbol Name (Top 97)                                                                              C
  000E9334(ABS)      Addr.  OM/LM @_IO_PTPC2
  000E9344(ABS)      Addr.  OM/LM @_IO_PTPC3
  000004A8(ABS)      Addr.  OM/LM @_IO_PUCR00
@@ -779,7 +811,7 @@ Symbol Value        Type   Def.  Symbol Name (Top 97)                           
  000003A2(ABS)      Addr.  OM/LM @_IO_TBR
  00000022(ABS)      Addr.  OM/LM  _IO_TCCS0
  00000026(ABS)      Addr.  OM/LM @_IO_TCCS1
- 00000020(ABS)      Addr.  OM/LM @_IO_TCDT0
+ 00000020(ABS)      Addr.  OM/LM  _IO_TCDT0
  00000024(ABS)      Addr.  OM/LM @_IO_TCDT1
  00000064(ABS)      Addr.  OM/LM  _IO_TMCSR1
  00000068(ABS)      Addr.  OM/LM  _IO_TMCSR2
@@ -789,6 +821,9 @@ Symbol Value        Type   Def.  Symbol Name (Top 97)                           
  0000006A(ABS)      Addr.  OM/LM  _IO_TMR2
  00000072(ABS)      Addr.  OM/LM @_IO_TMR6
  000000C0(ABS)      Addr.  OM/LM @_IO_UART0
+F2MC-16 Family SOFTUNE Linker Symbol List                                                       2013-04-26 09:48:46  Page:    16
+
+Symbol Value        Type   Def.  Symbol Name (Top 97)                                                                              C
  000000CA(ABS)      Addr.  OM/LM @_IO_UART1
  00000BF4(ABS)      Addr.  OM/LM @_IO_UER
  0000062B(ABS)      Addr.  OM/LM @_IO_VRAM1
@@ -808,139 +843,148 @@ Symbol Value        Type   Def.  Symbol Name (Top 97)                           
  0000062F(ABS)      Addr.  OM/LM  _IO_VRAM5
  00000633(ABS)      Addr.  OM/LM @_IO_VRAM9
  0000042C(ABS)      Addr.  OM/LM @_IO_VRCR
-F2MC-16 Family SOFTUNE Linker Symbol List                                                       2013-02-19 11:01:06  Page:    16
-
-Symbol Value        Type   Def.  Symbol Name (Top 97)                                                                              C
  0000040E(ABS)      Addr.  OM/LM  _IO_WDT
  00000420(ABS)      Addr.  OM/LM @_IO_WDTEC
  000004E0(ABS)      Addr.  OM/LM  _IO_WT
- 00FF18A8(ABS)      Addr.  OM/LM  _ISR_ADC
- 00FF22E6(ABS)      Addr.  OM/LM  _ISR_CAN0
- 00FF17BF(ABS)      Addr.  OM/LM  _ISR_RLT2
- 00FF024C(ABS)      Addr.  OM/LM  _InitADC
- 00FF0575(ABS)      Addr.  OM/LM @_InitFRTimer0
- 00FF0580(ABS)      Addr.  OM/LM @_InitICU1
- 00FF2816(ABS)      Addr.  OM/LM  _InitLCD
- 00FF1936(ABS)      Addr.  OM/LM @_InitMode
- 00FF2B26(ABS)      Addr.  OM/LM  _InitRTC
- 00FF0638(ABS)      Addr.  OM/LM  _InitSMC
- 00FF2CC7(ABS)      Addr.  OM/LM @_InitSoundGen
- 0000767E(ABS)      Addr.  OM/LM  _J1939CtrBufer
- 00FF24E5(ABS)      Addr.  OM/LM  _J1939_init
+ 00FF1946(ABS)      Addr.  OM/LM  _ISR_ADC
+ 00FF2DD8(ABS)      Addr.  OM/LM  _ISR_CAN0
+ 00FF185D(ABS)      Addr.  OM/LM  _ISR_RLT2
+ 00FF026E(ABS)      Addr.  OM/LM  _InitADC
+ 00FF05C5(ABS)      Addr.  OM/LM  _InitEI0
+ 00FF05A3(ABS)      Addr.  OM/LM @_InitFRTimer0
+ 00FF05AE(ABS)      Addr.  OM/LM  _InitICU1
+ 00FF3282(ABS)      Addr.  OM/LM  _InitLCD
+ 00FF35EB(ABS)      Addr.  OM/LM  _InitRTC
+ 00FF06D3(ABS)      Addr.  OM/LM  _InitSMC
+ 00FF378C(ABS)      Addr.  OM/LM  _InitSoundGen
+ 00007A8C(ABS)      Addr.  OM/LM @_J1939CtrBufer
+ 00FF2FD7(ABS)      Addr.  OM/LM  _J1939_init
  00FF80CE(ABS)      Addr.  OM/LM @_LCD_SEG_1
  00FF80C3(ABS)      Addr.  OM/LM @_LCD_SEG_2
  00FF80B8(ABS)      Addr.  OM/LM @_LCD_SEG_3_4
- 00FF1C52(ABS)      Addr.  OM/LM @_LoadAllParams
- 00FF29FD(ABS)      Addr.  OM/LM  _NumToTopStr
- 00FF2A87(ABS)      Addr.  OM/LM  _NumToTopStr3
- 00007796(ABS)      Addr.  OM/LM @_OutTemperature
- 00007798(ABS)      Addr.  OM/LM @_Pressure
- 00FF0B4B(ABS)      Addr.  OM/LM  _SMC_IRQ
+ 00FF2744(ABS)      Addr.  OM/LM @_LoadAllParams
+ 00FF3469(ABS)      Addr.  OM/LM  _NumToTopStr
+ 00FF3551(ABS)      Addr.  OM/LM  _NumToTopStr2
+ 00FF34F3(ABS)      Addr.  OM/LM  _NumToTopStr3
+ 00007B74(ABS)      Addr.  OM/LM @_OutTemperature
+ 00007B7A(ABS)      Addr.  OM/LM @_Pressure
+ 00007B76(ABS)      Addr.  OM/LM @_Pressure2
+ 00FF0BE9(ABS)      Addr.  OM/LM  _SMC_IRQ
  00FF800C(ABS)      Addr.  OM/LM @_SMC_TAB_CS
- 00FF0D48(ABS)      Addr.  OM/LM @_SMC_ZPD_DisableSMC
- 00FF0CD2(ABS)      Addr.  OM/LM  _SMC_ZPD_EnableSMC
- 00FF10C4(ABS)      Addr.  OM/LM @_SMC_ZPD_GetInformation
- 00FF0F7C(ABS)      Addr.  OM/LM  _SMC_ZPD_GetStallData
- 00FF0B8B(ABS)      Addr.  OM/LM  _SMC_ZPD_Init
- 00FF0CAB(ABS)      Addr.  OM/LM  _SMC_ZPD_SetADCSampleCount
- 00FF1075(ABS)      Addr.  OM/LM @_SMC_ZPD_SetFormThreshold
- 00FF0C4E(ABS)      Addr.  OM/LM  _SMC_ZPD_SetStepBlindingTime
- 00FF0C7C(ABS)      Addr.  OM/LM  _SMC_ZPD_SetStepSamplingTime
- 00FF0FE9(ABS)      Addr.  OM/LM @_SMC_ZPD_SetTestSignal_ADCSampling
- 00FF102F(ABS)      Addr.  OM/LM @_SMC_ZPD_SetTestSignal_StallDetected
- 00FF0FAB(ABS)      Addr.  OM/LM @_SMC_ZPD_SetTestSignal_StepBlindingTime
- 00FF0FCA(ABS)      Addr.  OM/LM @_SMC_ZPD_SetTestSignal_StepSamplingTime
- 00FF019F(ABS)      Addr.  OM/LM @_SMC_ZPD_StallDetected
- 00FF0D72(ABS)      Addr.  OM/LM  _SMC_ZPD_Start
- 00FF0F27(ABS)      Addr.  OM/LM  _SMC_ZPD_Stop
- 00FF13A8(ABS)      Addr.  OM/LM @_SMC_pzd
- 00007520(ABS)      Addr.  OM/LM  _SMCpos
- 00FF1D3B(ABS)      Addr.  OM/LM @_SaveAllParams
- 00FF1DE0(ABS)      Addr.  OM/LM @_SaveAllParamsSecondary
- 00FF079E(ABS)      Addr.  OM/LM @_SmcNormalParams
- 00FF0768(ABS)      Addr.  OM/LM @_SmcParamsForReturn
- 00FF2CF5(ABS)      Addr.  OM/LM  _SoundGenInt
- 00FF01E9(ABS)      Addr.  OM/LM @_StopStepper
- 000077A0(ABS)      Addr.  OM/LM @_TimerBlink
- 00FF1EA8(ABS)      Addr.  OM/LM @_Timer_Disable
- 00FF1E92(ABS)      Addr.  OM/LM  _Timer_Init
- 00FF1FA8(ABS)      Addr.  OM/LM @_Timer_IsElapsed
- 00FF2008(ABS)      Addr.  OM/LM  _Timer_Isr_MainClockTimer
- 00FF1F10(ABS)      Addr.  OM/LM  _Timer_Main
- 00FF1F90(ABS)      Addr.  OM/LM @_Timer_Remaining
-F2MC-16 Family SOFTUNE Linker Symbol List                                                       2013-02-19 11:01:06  Page:    17
+ 00FF0DE6(ABS)      Addr.  OM/LM @_SMC_ZPD_DisableSMC
+ 00FF0D70(ABS)      Addr.  OM/LM  _SMC_ZPD_EnableSMC
+ 00FF1162(ABS)      Addr.  OM/LM @_SMC_ZPD_GetInformation
+ 00FF101A(ABS)      Addr.  OM/LM  _SMC_ZPD_GetStallData
+ 00FF0C29(ABS)      Addr.  OM/LM  _SMC_ZPD_Init
+ 00FF0D49(ABS)      Addr.  OM/LM  _SMC_ZPD_SetADCSampleCount
+ 00FF1113(ABS)      Addr.  OM/LM @_SMC_ZPD_SetFormThreshold
+ 00FF0CEC(ABS)      Addr.  OM/LM  _SMC_ZPD_SetStepBlindingTime
+ 00FF0D1A(ABS)      Addr.  OM/LM  _SMC_ZPD_SetStepSamplingTime
+ 00FF1087(ABS)      Addr.  OM/LM @_SMC_ZPD_SetTestSignal_ADCSampling
+F2MC-16 Family SOFTUNE Linker Symbol List                                                       2013-04-26 09:48:46  Page:    17
 
 Symbol Value        Type   Def.  Symbol Name (Top 97)                                                                              C
- 00FF1EB4(ABS)      Addr.  OM/LM  _Timer_Start
- 00FF1FE1(ABS)      Addr.  OM/LM  _Timer_Wait
- 00FF2B6F(ABS)      Addr.  OM/LM  _ToBCD
- 00FF01F5(ABS)      Addr.  OM/LM  _Vectors_InitIrqLevels
- 00FF0243(ABS)      Addr.  OM/LM @_Vectors_Isr_DefaultHandler
- 0000779C(ABS)      Addr.  OM/LM @_Voltage
- 00FF0109(ABS)      Addr.  OM/LM @_ZPD_Init
- 00FF06D4(ABS)      Addr.  OM/LM  _ZeroPosSMC
- 00FF308C(ABS)      Addr.  LIB   @__fmull1
- 00FF33D6(ABS)      Addr.  LIB    __shld
- 00FF3414(ABS)      Addr.  LIB    __shrd
- 000077C0(ABS)      Addr.  OM/LM @__systemstack
- 00007AC0(ABS)      Addr.  OM/LM @__systemstack_top
- 00007AC0(ABS)      Addr.  OM/LM @__userstack
- 00007AC2(ABS)      Addr.  OM/LM @__userstack_top
- 00FF346E(ABS)      Addr.  LIB    _abs
+ 00FF10CD(ABS)      Addr.  OM/LM @_SMC_ZPD_SetTestSignal_StallDetected
+ 00FF1049(ABS)      Addr.  OM/LM @_SMC_ZPD_SetTestSignal_StepBlindingTime
+ 00FF1068(ABS)      Addr.  OM/LM @_SMC_ZPD_SetTestSignal_StepSamplingTime
+ 00FF01BB(ABS)      Addr.  OM/LM @_SMC_ZPD_StallDetected
+ 00FF0E10(ABS)      Addr.  OM/LM  _SMC_ZPD_Start
+ 00FF0FC5(ABS)      Addr.  OM/LM  _SMC_ZPD_Stop
+ 00FF1446(ABS)      Addr.  OM/LM @_SMC_pzd
+ 0000751C(ABS)      Addr.  OM/LM  _SMCpos
+ 00FF282D(ABS)      Addr.  OM/LM @_SaveAllParams
+ 00FF28D2(ABS)      Addr.  OM/LM @_SaveAllParamsSecondary
+ 00FF081F(ABS)      Addr.  OM/LM  _SmcNormalParams
+ 00FF0803(ABS)      Addr.  OM/LM  _SmcParamsForReturn
+ 00FF083D(ABS)      Addr.  OM/LM  _SmcTestParams
+ 00FF3AFD(ABS)      Addr.  OM/LM  _SoundGenInt
+ 00FF0205(ABS)      Addr.  OM/LM @_StopStepper
+ 00007B68(ABS)      Addr.  OM/LM @_TIME_OBNUL_FR
+ 00007B82(ABS)      Addr.  OM/LM @_TimerBlink
+ 00007B6A(ABS)      Addr.  OM/LM @_TimerFr
+ 00FF299A(ABS)      Addr.  OM/LM @_Timer_Disable
+ 00FF2984(ABS)      Addr.  OM/LM  _Timer_Init
+ 00FF2A9A(ABS)      Addr.  OM/LM @_Timer_IsElapsed
+ 00FF2AFA(ABS)      Addr.  OM/LM  _Timer_Isr_MainClockTimer
+ 00FF2A02(ABS)      Addr.  OM/LM  _Timer_Main
+ 00FF2A82(ABS)      Addr.  OM/LM @_Timer_Remaining
+ 00FF29A6(ABS)      Addr.  OM/LM  _Timer_Start
+ 00FF2AD3(ABS)      Addr.  OM/LM  _Timer_Wait
+ 00FF3634(ABS)      Addr.  OM/LM  _ToBCD
+ 00FF384D(ABS)      Addr.  OM/LM  _UpdateSound
+ 00FF3B09(ABS)      Addr.  OM/LM  _ValueLine
+ 00FF0211(ABS)      Addr.  OM/LM  _Vectors_InitIrqLevels
+ 00FF0265(ABS)      Addr.  OM/LM @_Vectors_Isr_DefaultHandler
+ 00007B7E(ABS)      Addr.  OM/LM @_Voltage
+ 00FF0125(ABS)      Addr.  OM/LM @_ZPD_Init
+ 00FF076F(ABS)      Addr.  OM/LM  _ZeroPosSMC
+ 00FF45F3(ABS)      Addr.  LIB   @__fmul1
+ 00FF46E6(ABS)      Addr.  LIB   @__fmull1
+ 00FF4AFD(ABS)      Addr.  LIB    __shld
+ 00FF4B3B(ABS)      Addr.  LIB    __shrd
+ 00007C26(ABS)      Addr.  OM/LM @__systemstack
+ 00007F26(ABS)      Addr.  OM/LM @__systemstack_top
+ 00007F26(ABS)      Addr.  OM/LM @__userstack
+ 00007F28(ABS)      Addr.  OM/LM @__userstack_top
+ 00FF4B95(ABS)      Addr.  LIB    _abs
  000074C8(ABS)      Addr.  OM/LM  _adc_value
- 0000763A(ABS)      Addr.  OM/LM @_apstcCANMessages
- 00007748(ABS)      Addr.  OM/LM @_aucStartStep
- 000077A4(ABS)      Addr.  OM/LM @_blink
- 00007790(ABS)      Addr.  OM/LM @_current_smc
- 0000778A(ABS)      Addr.  OM/LM @_flag_freq
- 000074EA(ABS)      Addr.  OM/LM @_flag_value_valid
- 000074D4(ABS)      Addr.  OM/LM @_frequency
+ 00007A48(ABS)      Addr.  OM/LM @_apstcCANMessages
+ 00007AFE(ABS)      Addr.  OM/LM @_aucStartStep
+ 00007B95(ABS)      Addr.  OM/LM @_blink
+ 00007B50(ABS)      Addr.  OM/LM @_current_smc
+ 00FF3BCA(ABS)      Addr.  OM/LM @_en_check0
+ 00007B4B(ABS)      Addr.  OM/LM  _flag_freq
+ 00007B4A(ABS)      Addr.  OM/LM  _flag_temp
+ 000074E6(ABS)      Addr.  OM/LM @_flag_value_valid
  00007270(ABS)      Addr.  OM/LM @_gaaucADSampleBuffer
  0000722C(ABS)      Addr.  OM/LM @_gastcStallData
- 00007726(ABS)      Addr.  OM/LM @_gbOutputStallData
- 00007728(ABS)      Addr.  OM/LM @_gbStallDetected
- 0000772A(ABS)      Addr.  OM/LM @_gbStepperRunning
- 00007200(ABS)      Addr.  OM/LM @_gstcInfo
- 00007736(ABS)      Addr.  OM/LM @_gstcZPDSettings
- 00007732(ABS)      Addr.  OM/LM @_gulStepBlindingTimeUs
- 0000772E(ABS)      Addr.  OM/LM @_gulStepSamplingTimeUs
- 0000772C(ABS)      Addr.  OM/LM @_gusADCSampleCount
- 00FF26DE(ABS)      Addr.  OM/LM @_i2c_0_master_int
- 00FF27A3(ABS)      Addr.  OM/LM  _i2c_0_slave
- 00FF27F8(ABS)      Addr.  OM/LM  _i2c_0_slave_int
- 00FF26A2(ABS)      Addr.  OM/LM @_init_i2c_0_master
- 00FF2786(ABS)      Addr.  OM/LM @_init_i2c_0_slave
- 00FF2641(ABS)      Addr.  OM/LM @_init_setting_i2c
- 00007786(ABS)      Addr.  OM/LM @_km
- 00007782(ABS)      Addr.  OM/LM @_km_sut
- 00007792(ABS)      Addr.  OM/LM  _m_enSmcMode
- 000076D2(ABS)      Addr.  OM/LM @_m_re_data0
- 000076CE(ABS)      Addr.  OM/LM @_m_re_num0
- 000076E6(ABS)      Addr.  OM/LM @_m_tr_data0
- 000076D0(ABS)      Addr.  OM/LM @_m_tr_num0
- 00FF00B0(ABS)      Addr.  OM/LM  _main
- 000074E2(ABS)      Addr.  OM/LM @_max_value
- 00FF2777(ABS)      Addr.  OM/LM @_receive_data_i2c
- 000076FE(ABS)      Addr.  OM/LM @_s_re_data0
- 000076FA(ABS)      Addr.  OM/LM  _s_re_num0
- 00007712(ABS)      Addr.  OM/LM  _s_tr_data0
- 000076FC(ABS)      Addr.  OM/LM  _s_tr_num0
- 00FF2882(ABS)      Addr.  OM/LM  _segment1
- 00FF28E2(ABS)      Addr.  OM/LM  _segment2
- 00FF2945(ABS)      Addr.  OM/LM  _segment3
-F2MC-16 Family SOFTUNE Linker Symbol List                                                       2013-02-19 11:01:06  Page:    18
+ 00007ADC(ABS)      Addr.  OM/LM @_gbOutputStallData
+ 00007ADE(ABS)      Addr.  OM/LM @_gbStallDetected
+ 00007AE0(ABS)      Addr.  OM/LM @_gbStepperRunning
+F2MC-16 Family SOFTUNE Linker Symbol List                                                       2013-04-26 09:48:46  Page:    18
 
 Symbol Value        Type   Def.  Symbol Name (Top 97)                                                                              C
- 00FF29A3(ABS)      Addr.  OM/LM  _segment4
- 00FF2693(ABS)      Addr.  OM/LM @_send_data_i2c
- 00FF0865(ABS)      Addr.  OM/LM @_smc__lpf
- 00FF07BC(ABS)      Addr.  OM/LM @_smc_out
+ 00007200(ABS)      Addr.  OM/LM @_gstcInfo
+ 00007AEC(ABS)      Addr.  OM/LM @_gstcZPDSettings
+ 00007AE8(ABS)      Addr.  OM/LM @_gulStepBlindingTimeUs
+ 00007AE4(ABS)      Addr.  OM/LM @_gulStepSamplingTimeUs
+ 00007AE2(ABS)      Addr.  OM/LM @_gusADCSampleCount
+ 00FF3169(ABS)      Addr.  OM/LM @_i2c_0_master_int
+ 00FF320F(ABS)      Addr.  OM/LM  _i2c_0_slave
+ 00FF3264(ABS)      Addr.  OM/LM  _i2c_0_slave_int
+ 00FF3133(ABS)      Addr.  OM/LM @_init_i2c_0_master
+ 00FF31F8(ABS)      Addr.  OM/LM  _init_i2c_0_slave
+ 00FF3B78(ABS)      Addr.  OM/LM  _initial_set
+ 00007B52(ABS)      Addr.  OM/LM  _m_enSmcMode
+ 0000780A(ABS)      Addr.  OM/LM  _m_re_data0
+ 00007606(ABS)      Addr.  OM/LM  _m_re_num0
+ 0000790A(ABS)      Addr.  OM/LM  _m_tr_data0
+ 00007608(ABS)      Addr.  OM/LM  _m_tr_num0
+ 00FF00B0(ABS)      Addr.  OM/LM  _main
+ 000074DE(ABS)      Addr.  OM/LM @_max_value
+ 00007B72(ABS)      Addr.  OM/LM @_rpm
+ 0000760A(ABS)      Addr.  OM/LM  _s_re_data0
+ 00007602(ABS)      Addr.  OM/LM  _s_re_num0
+ 0000770A(ABS)      Addr.  OM/LM  _s_tr_data0
+ 00007604(ABS)      Addr.  OM/LM  _s_tr_num0
+ 00FF32EE(ABS)      Addr.  OM/LM  _segment1
+ 00FF334E(ABS)      Addr.  OM/LM  _segment2
+ 00FF33B1(ABS)      Addr.  OM/LM  _segment3
+ 00FF340F(ABS)      Addr.  OM/LM  _segment4
+ 00007B8F(ABS)      Addr.  OM/LM @_sens_pressure2_activ
+ 00007B90(ABS)      Addr.  OM/LM @_sens_pressure_activ
+ 00FF0903(ABS)      Addr.  OM/LM @_smc__lpf
+ 00FF085A(ABS)      Addr.  OM/LM @_smc_out
  00FF8008(ABS)      Addr.  OM/LM @_smc_quad_a
  00FF8004(ABS)      Addr.  OM/LM @_smc_quad_b
  00FF8000(ABS)      Addr.  OM/LM @_smc_quad_b1
+ 00007BB2(ABS)      Addr.  OM/LM @_sound
  00FF0000(ABS)      Addr.  OM/LM @_start
- 0000767A(ABS)      Addr.  OM/LM @_stcError
- 0000778E(ABS)      Addr.  OM/LM @_time_update_smc
- 0000778C(ABS)      Addr.  OM/LM @_time_update_speed_out
- 000074E6(ABS)      Addr.  OM/LM @_value
- 0000777E(ABS)      Addr.  OM/LM @_value_temp
+ 00007B94(ABS)      Addr.  OM/LM @_stateEngine
+ 00007A88(ABS)      Addr.  OM/LM @_stcError
+ 00007B96(ABS)      Addr.  OM/LM @_test_mode
+ 00007B84(ABS)      Addr.  OM/LM @_time_test
+ 00007B4E(ABS)      Addr.  OM/LM @_time_update_smc
+ 00007B4C(ABS)      Addr.  OM/LM @_time_update_speed_out
+ 00007B46(ABS)      Addr.  OM/LM  _value
+ 000074E2(ABS)      Addr.  OM/LM  _valueTemper

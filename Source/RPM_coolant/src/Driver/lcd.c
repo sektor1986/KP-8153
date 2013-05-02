@@ -101,17 +101,17 @@ void NumToTopStr(unsigned long num)
 	if (num > 9)                    // Вывод десяток
 		segment3((num_str>>4)&0xF);
 	else
-		segment3(10);
+		segment3(SPACE);
 	
 	if (num > 99)                   // Вывод сотен
 		segment2((num_str>>8)&0xF);
 	else
-		segment2(10);
+		segment2(SPACE);
 		
 	if (num > 999)                  // Вывод тысяч
 		segment1((num_str>>12)&0xF);
 	else
-		segment1(10);	
+		segment1(SPACE);	
 		
 } 
 
@@ -121,16 +121,27 @@ void NumToTopStr3(unsigned long num)
 	
 	num_str = ToBCD(num);	
 			
-	segment4(num_str & 0xF);       // Вывод едениц     
-	if (num > 9)                    // Вывод десяток
-		segment3((num_str>>4)&0xF);
-	else
-		segment3(10);
-	
+	segment3(num_str & 0xF);       // Вывод едениц     
+    segment2((num_str>>4)&0xF);    // Вывод десяток
+		
 	if (num > 99)                   // Вывод сотен
-		segment2((num_str>>8)&0xF);
+		segment1((num_str>>8)&0xF);
 	else
-		segment2(10);
+		segment1(SPACE);
+	segment4(SPACE);
+}
+
+void NumToTopStr2(unsigned long num)
+{
+	unsigned long num_str = 0;
+	
+	if (num > 99)
+		num = 99;
+	num_str = ToBCD(num);
+	segment4(SPACE);
+	segment3(num_str & 0xF);       // Вывод едениц             
+	segment2((num_str>>4)&0xF);     // Вывод десяток
+
 }
 
 void ClearTopLine(void)
@@ -139,6 +150,15 @@ void ClearTopLine(void)
 	segment2(SPACE);
 	segment3(SPACE);
 	segment4(SPACE);
+}
+
+void Enable_simbols(void)
+{
+	ENABLE_POINT = 1;
+	SIMBOL_TIME = 1;
+	SIMBOL_V = 1;
+	SIMBOL_TEMP = 1;
+	SIMBOL_MINUS = 1;	
 }
 
 void Disable_simbols(void)

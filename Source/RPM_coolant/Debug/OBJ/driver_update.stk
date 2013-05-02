@@ -6,51 +6,145 @@
 #
         16	E	_DriverInit
 	->	E	_InitLCD
-	->	E	_InitMode
+	->	S	_InitMode
+	->	E	_InitSoundGen
 	->	E	_LoadAllParams
+	->	S	_StartTestMode
 	->	E	_Timer_Start
+	->	E	_Timer_Wait
 #
-        10	E	_InitMode
-	->	E	_ClearTopLine
-	->	E	_Disable_simbols
-	->	E	_segment1
-#
-        24	S	_UdateLCD
+        24	S	_InitMode
 	->	E	DTOF
-	->	E	DTOUL
 	->	E	FADDL
 	->	E	FMULL
-	->	E	FTESTL
-	->	E	FTOD
-	->	E	UITOD
-	->	E	_NumToTopStr
-	->	E	_NumToTopStr3
+	->	E	ITOD
+	->	E	_ClearTopLine
+	->	E	_Disable_simbols
+	->	S	_InitMode
+	->	E	_segment1
+#
+         8	S	_UdateLCD
+	->	S	_UpdatePressure
+	->	S	_UpdatePressure2
 	->	S	_UpdateTime
+	->	S	_UpdateVoltage
 #
-        24	S	_UpdateSMC
+        38	S	_UpdateSMC
+	->	E	DTOF
 	->	E	DTOL
+	->	E	FADD
+	->	E	FADDL
+	->	E	FCMP
+	->	E	FDIV
+	->	E	FMUL
 	->	E	FMULL
+	->	E	FTEST
+	->	E	FTOD
+	->	E	FTOL
 	->	E	UITOD
+	->	E	UITOF
+	->	E	ULTOF
+	->	S	_CalcRPM
+	->	E	_ValueLine
 #
-         6	S	_DriverUpdate
+        22	S	_DriverUpdate
+	->	E	FCMPL
+	->	E	FTOD
+	->	S	_CalcPressure
+	->	S	_CalcRPM
+	->	S	_CalcVoltage
+	->	S	_InitMode
+	->	S	_StopTestMode
 	->	S	_UdateLCD
 	->	S	_UpdateSMC
 	->	S	_UpdateStateEngine
 #
-         4	S	_UpdateStateEngine
+        14	S	_UpdateStateEngine
+	->	E	_DeactivateAllSound
+	->	S	_InitMode
+	->	E	_SmcNormalParams
+	->	E	_SmcParamsForReturn
+	->	E	_Timer_Wait
 #
-         2	S	_Timer_1s
+        22	S	_Timer_1s
+	->	E	FCMPL
+	->	E	ITOD
+	->	E	_ActivateSound
+	->	E	_DeactivateSound
 #
-         2	S	_Timer_60s
+         6	S	_Timer_250ms
+	->	E	_UpdateSound
 #
         14	E	_ButtonCallback
-	->	E	_InitMode
+	->	S	_InitMode
 #
         12	S	_UpdateTime
 	->	E	_segment1
 	->	E	_segment2
 	->	E	_segment3
 	->	E	_segment4
+#
+        30	S	_CalcVoltage
+	->	E	DTOF
+	->	E	FADDL
+	->	E	FDIV
+	->	E	FMULL
+	->	E	FTESTL
+	->	E	FTOD
+	->	E	ITOD
+#
+        34	S	_CalcRPM
+	->	E	DTOF
+	->	E	FDIVL
+	->	E	FMUL
+	->	E	FTOD
+	->	E	FTOUI
+	->	E	ULTOF
+#
+        38	S	_CalcPressure
+	->	E	DTOF
+	->	E	FADDL
+	->	E	FCMPL
+	->	E	FDIV
+	->	E	FMULL
+	->	E	FTESTL
+	->	E	FTOD
+	->	E	UITOD
+#
+        22	S	_UpdatePressure
+	->	E	DTOUL
+	->	E	FMULL
+	->	E	FTOD
+	->	E	_ClearTopLine
+	->	E	_NumToTopStr2
+	->	E	_segment1
+#
+        22	S	_UpdatePressure2
+	->	E	DTOUL
+	->	E	FMULL
+	->	E	FTOD
+	->	E	_ClearTopLine
+	->	E	_NumToTopStr2
+	->	E	_segment1
+#
+        22	S	_UpdateVoltage
+	->	E	DTOUL
+	->	E	FADDL
+	->	E	FMULL
+	->	E	FTOD
+	->	E	_ClearTopLine
+	->	E	_NumToTopStr3
+#
+        10	S	_StartTestMode
+	->	E	_Enable_simbols
+	->	E	_NumToTopStr
+	->	E	_SmcTestParams
+#
+        12	S	_StopTestMode
+	->	E	_ClearTopLine
+	->	E	_Disable_simbols
+	->	E	_SmcNormalParams
+	->	E	_Timer_Wait
 #
         30	E	_LoadAllParams
 	->	E	_Data_flash_SectorErase

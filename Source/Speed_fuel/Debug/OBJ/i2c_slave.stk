@@ -4,9 +4,6 @@
 #       ->     {E|S}   {call function}
 #               ...
 #
-         6	E	_receive_data_i2c
-	->	E	_init_i2c_0_slave
-#
          2	E	_init_i2c_0_slave
 #
          4	E	_i2c_0_slave

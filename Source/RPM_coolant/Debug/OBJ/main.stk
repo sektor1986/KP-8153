@@ -9,14 +9,19 @@
 	->	E	_ClearPosSMC
 	->	E	_DriverInit
 	->	E	_InitADC
+	->	E	_InitEI0
+	->	E	_InitICU1
 	->	E	_InitRTC
 	->	E	_InitSMC
+	->	E	_InitSoundGen
 	->	E	_J1939_init
 	->	E	_Timer_Init
 	->	E	_Timer_Main
 	->	E	_Timer_Wait
 	->	E	_Vectors_InitIrqLevels
 	->	E	_ZeroPosSMC
+	->	E	_init_i2c_0_slave
+	->	E	_initial_set
 #
         16	E	_ZPD_Init
 	->	E	_SMC_ZPD_EnableSMC

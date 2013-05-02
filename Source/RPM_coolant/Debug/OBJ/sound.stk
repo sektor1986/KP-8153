@@ -8,4 +8,14 @@
 #
          2	E	_Beep
 #
+         4	E	_ActivateSound
+#
+         4	E	_DeactivateSound
+#
+        10	E	_DeactivateAllSound
+	->	E	_DeactivateSound
+#
+        12	E	_UpdateSound
+	->	E	_Beep
+#
         14	I	_SoundGenInt

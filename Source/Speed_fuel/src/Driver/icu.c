@@ -9,7 +9,7 @@ volatile unsigned int FRT0_ovl_cnt;
 volatile unsigned int FRT0_ovl_cnt_new;
 volatile unsigned int FRT0_ovl_cnt_old;
 volatile unsigned char flag_value_valid;
-volatile unsigned long value;
+volatile unsigned long value = 0xFFFFFFFF;
 
 unsigned char flag_freq = 0;
 float frequency;
@@ -49,38 +49,46 @@ __interrupt void ICU1_IRQ (void)
 {
 	static unsigned int counter_imp = 0;
 	static unsigned int counter_imp_s = 0;
+	static unsigned int PassCounter = 0;
 
-	ICU1_new = IPCP1;                     // Save current ICU value
-	FRT0_ovl_cnt_new = FRT0_ovl_cnt;      // Save current FRT value
-	flag_freq = 1;
+	if (PassCounter == 0)
+	{
+		ICU1_new = IPCP1;                     // Save current ICU value
+		FRT0_ovl_cnt_new = FRT0_ovl_cnt;      // Save current FRT value
+		flag_freq = 1;
 	
-	if (TCCS0_IVF && (IPCP1 < 0x8000))   // Check for FRT/ICU race condition 
-	{                                     // In case that FRT was not yet handled 
-		FRT0_ovl_cnt_new++;                 // then increase temp FRT counter
-	}
+		if (TCCS0_IVF && (IPCP1 < 0x8000))   // Check for FRT/ICU race condition 
+		{                                     // In case that FRT was not yet handled 
+			FRT0_ovl_cnt_new++;                 // then increase temp FRT counter
+		}
 
-	// Calculation of time period
+		// Calculation of time period
 
-	if (ICS01_EG1 == 1)                   // Define the ending edge: 1:Rising  2:Falling  3:Both Edges
-	{
-		value = abs(FRT0_ovl_cnt_new - FRT0_ovl_cnt_old) * 0x10000UL + ICU1_new - ICU1_old;
-		flag_value_valid = 1;               // Flag to be used by main application. UART output here might be too long
-	}
- 
-	ICU1_old = ICU1_new;                  // Save current ICU value as reference for next cycle
-	FRT0_ovl_cnt_old = FRT0_ovl_cnt_new;  // Save current FRT value as reference for next cycle
-
-	ICS01_ICP1 = 0; // Clear ICU Irq-flag
-
-	if (value > max_value) 
-	{
-		counter_imp++;
-		if (counter_imp == 10)
+		if (ICS01_EG1 == 1)                   // Define the ending edge: 1:Rising  2:Falling  3:Both Edges
 		{
-			km++;
-			km_sut++;
-			counter_imp = 0;
-		}        
-	}	
+			value = abs(FRT0_ovl_cnt_new - FRT0_ovl_cnt_old) * 0x10000UL + ICU1_new - ICU1_old;
+			flag_value_valid = 1;               // Flag to be used by main application. UART output here might be too long
+		}
+ 
+		ICU1_old = ICU1_new;                  // Save current ICU value as reference for next cycle
+		FRT0_ovl_cnt_old = FRT0_ovl_cnt_new;  // Save current FRT value as reference for next cycle
+
+		if (value > max_value) 
+		{
+			counter_imp++;
+			if (counter_imp == 5)
+			{
+				km++;
+				km_sut++;
+				counter_imp = 0;
+			}        
+		}
+		PassCounter = 1;	
+	}
+	else
+		PassCounter--;
+	
+	
+	ICS01_ICP1 = 0; // Clear ICU Irq-flag
 }
 

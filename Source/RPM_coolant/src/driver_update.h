@@ -6,7 +6,7 @@ typedef enum en_gui_mode
     mode_Time,
     mode_Voltage,
     mode_Pressure,
-    mode_Temperature,
+    mode_Pressure2,
     Empty
 } en_gui_mode_t;
 

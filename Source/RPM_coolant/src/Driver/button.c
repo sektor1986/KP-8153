@@ -135,10 +135,14 @@ static void ScanTimerCallback(void)
         {
             // If debounce counter reached 0
             //Если идет обработка долгого нажатия кнопки
-            if (pstcButton->enCurrState == StateLong)
+            if (enSampledState == StateLong)
             {
             	// Если кнопка нажалась до 3 раз пауза между нажатиями 1 с
-            	if (pstcButton->u16countLongPres <= 2)
+            	if (pstcButton->u16countLongPres == 0)
+            	{
+            		pstcButton->u16countLongPres++;
+            	}
+            	else if (pstcButton->u16countLongPres <= 2)
             	{
             		if (pstcButton->u8interval < (1000/BUTTON_SCAN_INTERVAL_MS))
             		{

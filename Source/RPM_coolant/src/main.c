@@ -19,6 +19,8 @@
 #include "j1939.h"
 #include "rtc.h"
 #include "driver_update.h"
+#include "icu.h"
+#include "sound.h"
 
 
 #if (SMC_TYPE == SMC_TYPE_R200)
@@ -91,6 +93,11 @@ void main(void)
 	// Enable interrupts
 	__EI();
 	
+	PIER04_IE5 = 1;
+	PIER04_IE4 = 1;	/* i2c 0 */
+	initial_set();
+	init_i2c_0_slave();
+	
 	 #if ((SMC_TYPE != SMC_TYPE_R200) && (ZPD == ZPD_ENABLE))
 		ZPD_Init();	
 		//Ожидание окончания ZPD
@@ -107,6 +114,9 @@ void main(void)
 	InitADC();
 	InitRTC();
 	J1939_init();
+	InitICU1();
+	InitEI0();
+	InitSoundGen();
 	
 // Если двигатель R200 или ZPD не активно
 	#if ((SMC_TYPE == SMC_TYPE_R200) || (ZPD == ZPD_DISABLE))	
@@ -118,7 +128,6 @@ void main(void)
 	
 	DriverInit();
 	Button_Init(ButtonCallback);
-
 	// Endless loop
 	while(1)
 	{

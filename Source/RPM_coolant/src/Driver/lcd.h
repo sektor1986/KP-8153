@@ -11,6 +11,7 @@
 
 void InitLCD (void);
 void NumToTopStr(unsigned long num);
+void NumToTopStr2(unsigned long num);
 void NumToTopStr3(unsigned long num);
 
 
@@ -22,5 +23,6 @@ void segment4(unsigned char NB);
 
 void ClearTopLine(void);
 void Disable_simbols(void);
+void Enable_simbols(void);
 
 #endif // __LCD_H

@@ -41,10 +41,11 @@ void SetValueBacklight(void)
 		if (adc_value[ADC_BACKLIGHT] > 500)
 			new_backlight = 125;
 		else 
-			if (adc_value[ADC_BACKLIGHT] < 60)       // от 04.06.2012
-				new_backlight = 200;
-			else 
-				new_backlight = (adc_value[ADC_BACKLIGHT]) >> 2;		
+			new_backlight = 200;
+//			if (adc_value[ADC_BACKLIGHT] < 60)       // от 04.06.2012
+//				new_backlight = 200;
+//			else 
+//				new_backlight = (adc_value[ADC_BACKLIGHT]) >> 2;		
 	}	
 	else
 		new_backlight = 0;

@@ -113,35 +113,43 @@ void ClearPosSMC(void)
 
 void SmcParamsForReturn(void)
 {
-	SMCcontrol[0].smc_dn =   6;                 /* set up damping grade       */ 
-	SMCcontrol[0].smc_vmax = 200;               /* set up velocity limit          */ 
-	SMCcontrol[0].smc_amax =  4;                /* set up acceleration limit      */ 
+//	SMCcontrol[0].smc_dn =   6;                 /* set up damping grade       */ 
+//	SMCcontrol[0].smc_vmax = 200;               /* set up velocity limit          */ 
+//	SMCcontrol[0].smc_amax =  4;                /* set up acceleration limit      */ 
 	SMCpos[0].smc_inp = SMCpos[0].smc_inp >> 1;	
-	SMCcontrol[1].smc_dn =   6;                 /* set up damping grade       */ 
-	SMCcontrol[1].smc_vmax = 200;               /* set up velocity limit          */ 
-	SMCcontrol[1].smc_amax =  4;                /* set up acceleration limit      */ 	
+//	SMCcontrol[1].smc_dn =   6;                 /* set up damping grade       */ 
+//	SMCcontrol[1].smc_vmax = 200;               /* set up velocity limit          */ 
+//	SMCcontrol[1].smc_amax =  4;                /* set up acceleration limit      */ 	
 	SMCpos[1].smc_inp = SMCpos[1].smc_inp >> 1;	
 }
 
 void SmcNormalParams(void)
 {
-	SMCcontrol[0].smc_dn =   8;                 /* set up damping grade       */ 
-	SMCcontrol[0].smc_amax =  1;                /* set up acceleration limit      */ 
-	SMCcontrol[0].smc_vmax = 100;               /* set up velocity limit          */ 	
-	SMCcontrol[1].smc_dn =   8;                 /* set up damping grade       */ 
-	SMCcontrol[1].smc_amax =  1;                /* set up acceleration limit      */ 
-	SMCcontrol[1].smc_vmax = 100;               /* set up velocity limit          */ 	
+	SMCcontrol[FUEL_LEVEL].smc_dn =   8;                 /* set up damping grade       */ 
+	SMCcontrol[FUEL_LEVEL].smc_amax =  1;                /* set up acceleration limit      */ 
+	SMCcontrol[FUEL_LEVEL].smc_vmax = 15;               /* set up velocity limit          */ 	
+	SMCcontrol[SPEEDOMETR].smc_dn =   8;                 /* set up damping grade       */ 
+	SMCcontrol[SPEEDOMETR].smc_amax =  1;                /* set up acceleration limit      */ 
+	SMCcontrol[SPEEDOMETR].smc_vmax = 100;               /* set up velocity limit          */ 	
 }
 
 void SmcTestParams(void)
 {
-	SMCcontrol[0].smc_dn =   8;                 /* set up damping grade       */ 
-	SMCcontrol[0].smc_amax =  1;                /* set up acceleration limit      */ 
-	SMCcontrol[0].smc_vmax = 30;               /* set up velocity limit          */ 	
-	SMCcontrol[1].smc_dn =   8;                 /* set up damping grade       */ 
-	SMCcontrol[1].smc_amax =  1;                /* set up acceleration limit      */ 
-	SMCcontrol[1].smc_vmax = 30;               /* set up velocity limit          */ 		
+	SMCcontrol[FUEL_LEVEL].smc_dn =   8;                 /* set up damping grade       */ 
+	SMCcontrol[FUEL_LEVEL].smc_amax =  1;                /* set up acceleration limit      */ 
+	SMCcontrol[FUEL_LEVEL].smc_vmax = 12;               /* set up velocity limit          */ 	
+	SMCcontrol[SPEEDOMETR].smc_dn =   8;                 /* set up damping grade       */ 
+	SMCcontrol[SPEEDOMETR].smc_amax =  1;                /* set up acceleration limit      */ 
+	SMCcontrol[SPEEDOMETR].smc_vmax = 30;               /* set up velocity limit          */ 		
 }
+
+void SmcFuelDemp(void)
+{
+	SMCcontrol[FUEL_LEVEL].smc_dn =   10;                 /* set up damping grade       */ 
+	SMCcontrol[FUEL_LEVEL].smc_amax =  1;                /* set up acceleration limit      */ 
+	SMCcontrol[FUEL_LEVEL].smc_vmax = 1;               /* set up velocity limit          */ 	
+}
+
 
 void smc_out(long ustp, unsigned char n) 
 { 

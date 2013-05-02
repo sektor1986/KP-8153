@@ -41,7 +41,7 @@ __interrupt void Vectors_Isr_DefaultHandler (void);
 #pragma	intvect	Timer_Isr_MainClockTimer   14	///< Main Clock Timer
 #pragma	intvect	Vectors_Isr_DefaultHandler 15	///< Sub Clock Timer
 #pragma	intvect	Vectors_Isr_DefaultHandler 16	///< LVD-interrupt
-#pragma	intvect	Vectors_Isr_DefaultHandler 17	///< External Interrupt 0
+#pragma	intvect	EI0_IRQ                    17	///< External Interrupt 0
 #pragma	intvect	Vectors_Isr_DefaultHandler 18	///< External Interrupt 1
 #pragma	intvect	Vectors_Isr_DefaultHandler 19	///< External Interrupt 2
 #pragma	intvect	Vectors_Isr_DefaultHandler 20	///< External Interrupt 3
@@ -182,14 +182,15 @@ void Vectors_InitIrqLevels(void)
   {
     ICR = (u8Irq << 8) | DEFAULT_ILM_MASK;
   }
-  ICR = (14 << 8) | 2;  // MC Timer
+  ICR = (14 << 8) | 3;  // MC Timer
+  ICR = (17 << 8) | 3;  // EI0
   ICR = (33 << 8) | 3;	// CAN0 
   ICR = (60 << 8) | 3;  // SMC   RLT2
   ICR = (98 << 8) | 3;  // ADC
-  ICR = (66 << 8) | 3;	// ICU1   
+  ICR = (66 << 8) | 2;	// ICU1   
   ICR = (89 << 8) | 2;	// FRT0 
   ICR = (95 << 8) | 3;	// Sound 
-  ICR = (96 << 8) | 3;	// I2C 
+  ICR = (96 << 8) | 1;	// I2C 
 
 }
 

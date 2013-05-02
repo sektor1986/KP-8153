@@ -85,11 +85,12 @@
 #define TIMER_ID_MAIN                   0
 #define TIMER_ID_BUTTON                 1
 #define TIMER_1S                        2
-#define TIMER_60S                       3
+#define TIMER_250ms                     3
 #define TIMER_ID_J1939                  4
+#define TIMER_TIMEOUT                   5
 
 // Number of timer IDs (= last timer ID + 1)
-#define TIMER_COUNT						5
+#define TIMER_COUNT						6
 
 /*****************************************************************************/
 /* Global type definitions ('typedef')                                       */

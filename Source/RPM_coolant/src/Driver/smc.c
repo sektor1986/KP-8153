@@ -113,13 +113,13 @@ void ClearPosSMC(void)
 
 void SmcParamsForReturn(void)
 {
-	SMCcontrol[0].smc_dn =   6;                 /* set up damping grade       */ 
-	SMCcontrol[0].smc_vmax = 200;               /* set up velocity limit          */ 
-	SMCcontrol[0].smc_amax =  4;                /* set up acceleration limit      */ 
+//	SMCcontrol[0].smc_dn =   6;                 /* set up damping grade       */ 
+//	SMCcontrol[0].smc_vmax = 200;               /* set up velocity limit          */ 
+//	SMCcontrol[0].smc_amax =  4;                /* set up acceleration limit      */ 
 	SMCpos[0].smc_inp = SMCpos[0].smc_inp >> 1;	
-	SMCcontrol[1].smc_dn =   6;                 /* set up damping grade       */ 
-	SMCcontrol[1].smc_vmax = 200;               /* set up velocity limit          */ 
-	SMCcontrol[1].smc_amax =  4;                /* set up acceleration limit      */ 	
+//	SMCcontrol[1].smc_dn =   6;                 /* set up damping grade       */ 
+//	SMCcontrol[1].smc_vmax = 200;               /* set up velocity limit          */ 
+//	SMCcontrol[1].smc_amax =  4;                /* set up acceleration limit      */ 	
 	SMCpos[1].smc_inp = SMCpos[1].smc_inp >> 1;	
 }
 
@@ -131,6 +131,16 @@ void SmcNormalParams(void)
 	SMCcontrol[1].smc_dn =   8;                 /* set up damping grade       */ 
 	SMCcontrol[1].smc_amax =  1;                /* set up acceleration limit      */ 
 	SMCcontrol[1].smc_vmax = 100;               /* set up velocity limit          */ 	
+}
+
+void SmcTestParams(void)
+{
+	SMCcontrol[SMC_COOLANT].smc_dn =   8;                 /* set up damping grade       */ 
+	SMCcontrol[SMC_COOLANT].smc_amax =  1;                /* set up acceleration limit      */ 
+	SMCcontrol[SMC_COOLANT].smc_vmax = 12;               /* set up velocity limit          */ 	
+	SMCcontrol[SMC_RPM].smc_dn =   8;                 /* set up damping grade       */ 
+	SMCcontrol[SMC_RPM].smc_amax =  1;                /* set up acceleration limit      */ 
+	SMCcontrol[SMC_RPM].smc_vmax = 30;               /* set up velocity limit          */ 		
 }
 
 void smc_out(long ustp, unsigned char n) 

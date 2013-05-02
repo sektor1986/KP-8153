@@ -7,11 +7,14 @@
         34	E	_DriverInit
 	->	E	DTOUL
 	->	E	FDIVL
+	->	E	FMULL
 	->	E	FTOD
 	->	E	_InitLCD
 	->	E	_LoadAllParams
 	->	S	_StartTestMode
 	->	E	_Timer_Start
+	->	E	_init_i2c_0_master
+	->	E	_initial_set
 #
         26	S	_UdateLCD
 	->	E	DIVUL
@@ -48,9 +51,12 @@
 	->	S	_CalcSpeed
 	->	E	_ValueLine
 #
-        22	S	_DriverUpdate
+        24	S	_DriverUpdate
 	->	E	FCMPL
 	->	E	FTOD
+	->	E	FTOI
+	->	S	_CalcSpeed
+	->	E	_SendDataI2C
 	->	E	_SetValueBacklight
 	->	S	_StopTestMode
 	->	S	_UdateLCD
@@ -70,13 +76,18 @@
 	->	E	_NumToTopStr
 	->	E	_SmcTestParams
 #
-         6	S	_StopTestMode
+        12	S	_StopTestMode
 	->	E	_ClearBottomLine
 	->	E	_ClearTopLine
 	->	E	_Disable_simbols
 	->	E	_SmcNormalParams
+	->	E	_Timer_Wait
 #
-         2	S	_Timer_1s
+        22	S	_Timer_1s
+	->	E	FCMPL
+	->	E	FTOD
+	->	E	_SmcFuelDemp
+	->	E	_SmcNormalParams
 #
          2	S	_Timer_60s
 #

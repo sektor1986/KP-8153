@@ -1,0 +1,10 @@
+@e:\sektor\git_project\kp-8153\source\speed_fuel\src\driver\initial_set.c
+#  E=Extern  S=Static  I=Interrupt
+#   {Stack}    {E|S|I} {function name} [A]
+#       ->     {E|S}   {call function}
+#               ...
+#
+         4	E	_initial_set
+#
+         6	E	_SendDataI2C
+	->	E	_init_i2c_0_master
